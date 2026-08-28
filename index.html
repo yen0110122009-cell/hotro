@@ -1,0 +1,2752 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hệ thống hỗ trợ — Câu lạc bộ Vươn 5 Giờ Sáng">
+  <title>CLB Vươn 5 Giờ Sáng</title>
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { background: #f5f8f5; }
+  </style>
+</head>
+<body>
+<div id="clb-vuon5gio">
+
+<style>
+#clb-vuon5gio{
+  --g:#2e7d32;
+  --g2:#43a047;
+  --g3:#eaf6eb;
+  --dark:#17351c;
+  --red:#c62828;
+  --red2:#ffebee;
+  --orange:#ef6c00;
+  --orange2:#fff3e0;
+  --blue:#1565c0;
+  --blue2:#e3f2fd;
+  --purple:#6a1b9a;
+  --purple2:#f3e5f5;
+  --text:#263329;
+  --muted:#66736a;
+  --line:#e4ebe5;
+  --bg:#f5f8f5;
+  --white:#fff;
+  --shadow:0 8px 28px rgba(20,50,25,.08);
+  --radius:20px;
+
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  line-height:1.65;
+  box-sizing:border-box;
+}
+
+#clb-vuon5gio *,
+#clb-vuon5gio *::before,
+#clb-vuon5gio *::after{
+  box-sizing:border-box;
+}
+
+#clb-vuon5gio button,
+#clb-vuon5gio input,
+#clb-vuon5gio select{
+  font:inherit;
+}
+
+#clb-vuon5gio button{
+  cursor:pointer;
+}
+
+#clb-vuon5gio .clb-header{
+  background:linear-gradient(135deg,#1b5e20,#43a047);
+  color:white;
+  padding:42px 24px;
+  text-align:center;
+  border-radius:24px 24px 0 0;
+}
+
+#clb-vuon5gio .clb-logo{
+  font-size:48px;
+  margin-bottom:5px;
+}
+
+#clb-vuon5gio .clb-header h1{
+  margin:0 0 8px;
+  font-size:clamp(27px,4vw,40px);
+}
+
+#clb-vuon5gio .clb-header p{
+  margin:0;
+  font-size:16px;
+  opacity:.95;
+}
+
+#clb-vuon5gio .clb-nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:12px;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+#clb-vuon5gio .nav-btn{
+  border:0;
+  background:#edf5ee;
+  color:#245c2c;
+  padding:10px 15px;
+  border-radius:999px;
+  font-weight:700;
+  transition:.2s;
+}
+
+#clb-vuon5gio .nav-btn:hover{
+  transform:translateY(-1px);
+  background:#dceedd;
+}
+
+#clb-vuon5gio .nav-btn.active{
+  background:var(--g);
+  color:white;
+}
+
+#clb-vuon5gio .clb-container{
+  background:var(--bg);
+  padding:25px;
+}
+
+#clb-vuon5gio .page{
+  display:none;
+}
+
+#clb-vuon5gio .page.active{
+  display:block;
+}
+
+#clb-vuon5gio .hero{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:30px;
+  box-shadow:var(--shadow);
+  margin-bottom:22px;
+}
+
+#clb-vuon5gio .hero h2{
+  margin:0 0 10px;
+  color:var(--g);
+  font-size:26px;
+}
+
+#clb-vuon5gio .hero p{
+  margin:8px 0;
+}
+
+#clb-vuon5gio .grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:18px;
+}
+
+#clb-vuon5gio .card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:23px;
+  box-shadow:var(--shadow);
+}
+
+#clb-vuon5gio .card h3{
+  margin:0 0 8px;
+  color:var(--dark);
+}
+
+#clb-vuon5gio .card p{
+  color:var(--muted);
+}
+
+#clb-vuon5gio .icon{
+  font-size:35px;
+  margin-bottom:7px;
+}
+
+#clb-vuon5gio .support-card{
+  border-top:5px solid var(--g);
+}
+
+#clb-vuon5gio .absence-card{
+  border-top:5px solid var(--red);
+}
+
+#clb-vuon5gio .student-card{
+  border-top:5px solid var(--blue);
+}
+
+#clb-vuon5gio .worker-card{
+  border-top:5px solid var(--purple);
+}
+
+#clb-vuon5gio .section-title{
+  margin:32px 0 15px;
+  color:var(--dark);
+}
+
+#clb-vuon5gio .notice,
+#clb-vuon5gio .danger,
+#clb-vuon5gio .success,
+#clb-vuon5gio .info{
+  padding:17px;
+  border-radius:14px;
+  margin:15px 0;
+}
+
+#clb-vuon5gio .notice{
+  background:#fff8e1;
+  border-left:5px solid #f9a825;
+}
+
+#clb-vuon5gio .danger{
+  background:var(--red2);
+  border-left:5px solid var(--red);
+}
+
+#clb-vuon5gio .success{
+  background:var(--g3);
+  border-left:5px solid var(--g);
+}
+
+#clb-vuon5gio .info{
+  background:var(--blue2);
+  border-left:5px solid var(--blue);
+}
+
+#clb-vuon5gio .steps{
+  display:grid;
+  gap:12px;
+}
+
+#clb-vuon5gio .step{
+  display:flex;
+  gap:15px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+#clb-vuon5gio .step-number{
+  flex:0 0 40px;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--g);
+  color:white;
+  font-weight:800;
+}
+
+#clb-vuon5gio .step strong{
+  color:var(--dark);
+}
+
+#clb-vuon5gio .step p{
+  margin:3px 0 0;
+  color:var(--muted);
+}
+
+#clb-vuon5gio .btn{
+  border:0;
+  border-radius:12px;
+  padding:11px 16px;
+  font-weight:700;
+  margin-top:12px;
+}
+
+#clb-vuon5gio .btn-green{
+  background:var(--g);
+  color:white;
+}
+
+#clb-vuon5gio .btn-red{
+  background:var(--red);
+  color:white;
+}
+
+#clb-vuon5gio .btn-light{
+  background:#edf5ee;
+  color:#245c2c;
+}
+
+#clb-vuon5gio .btn-blue{
+  background:var(--blue);
+  color:white;
+}
+
+#clb-vuon5gio .support-process{
+  margin-top:20px;
+}
+
+#clb-vuon5gio .support-box{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+  margin-bottom:15px;
+}
+
+#clb-vuon5gio .support-box h3{
+  margin-top:0;
+}
+
+#clb-vuon5gio ul,
+#clb-vuon5gio ol{
+  padding-left:22px;
+}
+
+#clb-vuon5gio li{
+  margin:6px 0;
+}
+
+#clb-vuon5gio .task-toolbar{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+  margin-bottom:20px;
+}
+
+#clb-vuon5gio .task-toolbar input,
+#clb-vuon5gio .task-toolbar select{
+  width:100%;
+  padding:13px;
+  border:1px solid #d4ddd5;
+  border-radius:11px;
+  margin-bottom:10px;
+  background:white;
+  outline:none;
+}
+
+#clb-vuon5gio .task-toolbar input:focus,
+#clb-vuon5gio .task-toolbar select:focus{
+  border-color:var(--g);
+  box-shadow:0 0 0 3px rgba(46,125,50,.1);
+}
+
+#clb-vuon5gio .filter-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+#clb-vuon5gio .filter{
+  border:0;
+  padding:9px 13px;
+  border-radius:999px;
+  background:#edf5ee;
+  color:#245c2c;
+  font-weight:700;
+}
+
+#clb-vuon5gio .filter.active{
+  background:var(--g);
+  color:white;
+}
+
+#clb-vuon5gio .task-card{
+  position:relative;
+  overflow:hidden;
+}
+
+#clb-vuon5gio .task-code{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+#clb-vuon5gio .level{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+#clb-vuon5gio .level1{
+  background:#e8f5e9;
+  color:#2e7d32;
+}
+
+#clb-vuon5gio .level2{
+  background:#fff8e1;
+  color:#ef6c00;
+}
+
+#clb-vuon5gio .level3{
+  background:#fff3e0;
+  color:#e65100;
+}
+
+#clb-vuon5gio .level4{
+  background:#ffebee;
+  color:#b71c1c;
+}
+
+#clb-vuon5gio .tag{
+  display:inline-block;
+  font-size:11px;
+  background:#f0f3f0;
+  padding:4px 8px;
+  border-radius:8px;
+  margin:3px 3px 3px 0;
+}
+
+#clb-vuon5gio .task-count{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+#clb-vuon5gio .modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(0,0,0,.6);
+  padding:15px;
+  overflow:auto;
+}
+
+#clb-vuon5gio .modal.show{
+  display:block;
+}
+
+#clb-vuon5gio .modal-box{
+  width:min(850px,100%);
+  margin:25px auto;
+  background:white;
+  border-radius:22px;
+  padding:28px;
+  position:relative;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+#clb-vuon5gio .close{
+  position:absolute;
+  right:15px;
+  top:13px;
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:#eef1ee;
+  font-size:22px;
+}
+
+#clb-vuon5gio .close:hover{
+  background:#e0e5e0;
+}
+
+#clb-vuon5gio .detail-section{
+  border-top:1px solid var(--line);
+  margin-top:21px;
+  padding-top:18px;
+}
+
+#clb-vuon5gio .detail-section h4{
+  color:var(--g);
+  margin:0 0 9px;
+  font-size:17px;
+}
+
+#clb-vuon5gio .checklist{
+  list-style:none;
+  padding:0;
+}
+
+#clb-vuon5gio .checklist li{
+  background:#f7faf7;
+  padding:10px 12px;
+  border-radius:10px;
+  margin:6px 0;
+}
+
+#clb-vuon5gio .faq-search{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:15px;
+  margin-bottom:16px;
+}
+
+#clb-vuon5gio .faq-search input{
+  width:100%;
+  padding:13px;
+  border:1px solid #d4ddd5;
+  border-radius:10px;
+}
+
+#clb-vuon5gio .faq{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+  margin:10px 0;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+
+#clb-vuon5gio .faq-question{
+  width:100%;
+  border:0;
+  background:white;
+  padding:17px;
+  text-align:left;
+  font-weight:800;
+  color:var(--dark);
+}
+
+#clb-vuon5gio .faq-question:hover{
+  background:#f8fbf8;
+}
+
+#clb-vuon5gio .faq-content{
+  display:none;
+  padding:0 17px 17px;
+  color:var(--muted);
+}
+
+#clb-vuon5gio .faq.open .faq-content{
+  display:block;
+}
+
+#clb-vuon5gio .footer{
+  background:#18351d;
+  color:white;
+  text-align:center;
+  padding:28px 20px;
+  border-radius:0 0 24px 24px;
+}
+
+#clb-vuon5gio .footer p{
+  margin:5px 0 0;
+  opacity:.9;
+}
+
+#clb-vuon5gio .muted{
+  color:var(--muted);
+}
+
+#clb-vuon5gio .small{
+  font-size:13px;
+  color:var(--muted);
+}
+
+#clb-vuon5gio .empty{
+  grid-column:1/-1;
+  text-align:center;
+  padding:35px;
+}
+
+@media(max-width:650px){
+
+  #clb-vuon5gio .clb-container{
+    padding:14px;
+  }
+
+  #clb-vuon5gio .clb-header{
+    padding:30px 15px;
+  }
+
+  #clb-vuon5gio .hero{
+    padding:21px;
+  }
+
+  #clb-vuon5gio .modal{
+    padding:7px;
+  }
+
+  #clb-vuon5gio .modal-box{
+    padding:21px;
+    margin:10px auto;
+  }
+
+  #clb-vuon5gio .step{
+    gap:10px;
+  }
+}
+</style>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="clb-header">
+
+  <div class="clb-logo">🍀</div>
+
+  <h1>CLB Vươn 5 Giờ Sáng</h1>
+
+  <p>
+    Hệ thống hỗ trợ — Đổi bằng hành động thực tế
+  </p>
+
+</header>
+
+
+<!-- ================= NAV ================= -->
+
+<nav class="clb-nav">
+
+  <button class="nav-btn active" data-page="home">
+    🏠 Trang chủ
+  </button>
+
+  <button class="nav-btn" data-page="support">
+    💚 Hỗ trợ
+  </button>
+
+  <button class="nav-btn" data-page="tasks">
+    📚 Tra cứu nhiệm vụ
+  </button>
+
+  <button class="nav-btn" data-page="faq">
+    ❓ Câu hỏi thường gặp
+  </button>
+
+</nav>
+
+
+<div class="clb-container">
+
+
+<!-- =====================================================
+     TRANG CHỦ
+===================================================== -->
+
+<section id="clb-page-home" class="page active">
+
+  <div class="hero">
+
+    <h2>🌱 Hỗ trợ không có nghĩa là bỏ qua trách nhiệm</h2>
+
+    <p>
+      Hệ thống này được xây dựng để CLB Vươn 5 Giờ Sáng
+      có thể hỗ trợ thành viên trong những trường hợp thực sự cần thiết,
+      đồng thời vẫn giữ được sự công bằng, minh bạch và tinh thần trách nhiệm.
+    </p>
+
+    <div class="success">
+
+      <strong>🍀 Nguyên tắc cốt lõi</strong>
+
+      <p>
+        Khi một thành viên được hỗ trợ, điều đó không có nghĩa là
+        trách nhiệm biến mất.
+        Thành viên sẽ thể hiện sự chủ động bằng một
+        <strong>hành động thực tế</strong> phù hợp với trường hợp của mình.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="grid">
+
+    <div class="card support-card">
+
+      <div class="icon">💚</div>
+
+      <h3>Hỗ trợ Quỹ CLB</h3>
+
+      <p>
+        Dành cho thành viên thực sự gặp khó khăn về tài chính
+        và hiện tại không thể đóng khoản đóng góp vào Quỹ CLB.
+      </p>
+
+      <button class="btn btn-green" data-page="support">
+        Xem cách đăng ký →
+      </button>
+
+    </div>
+
+
+    <div class="card absence-card">
+
+      <div class="icon">🔴</div>
+
+      <h3>Hỗ trợ Vắng không phép</h3>
+
+      <p>
+        Dành cho thành viên có trường hợp vắng không phép
+        và cần thực hiện nhiệm vụ thay thế để thể hiện trách nhiệm.
+      </p>
+
+      <button class="btn btn-red" data-page="support">
+        Xem quy định →
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <h2 class="section-title">
+    🧭 Thành viên cần làm gì?
+  </h2>
+
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="step-number">1</div>
+
+      <div>
+
+        <strong>Nêu rõ lý do cần hỗ trợ</strong>
+
+        <p>
+          Trình bày trung thực trường hợp của mình.
+          Không cần cung cấp những thông tin riêng tư không cần thiết.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">2</div>
+
+      <div>
+
+        <strong>Xác định loại hỗ trợ</strong>
+
+        <p>
+          Bạn đang cần hỗ trợ Quỹ CLB,
+          xử lý Vắng không phép,
+          hay trường hợp có cả hai?
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">3</div>
+
+      <div>
+
+        <strong>Tra cứu nhiệm vụ</strong>
+
+        <p>
+          Xem cấp độ, yêu cầu, bằng chứng và tiêu chí
+          trước khi chọn nhiệm vụ.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">4</div>
+
+      <div>
+
+        <strong>Trao đổi với BQL</strong>
+
+        <p>
+          Nếu chưa biết nhiệm vụ nào phù hợp,
+          hãy nhắn trực tiếp cho Ban Quản lý.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">5</div>
+
+      <div>
+
+        <strong>Thực hiện và gửi bằng chứng</strong>
+
+        <p>
+          Hoàn thành nhiệm vụ rồi gửi video, ảnh hoặc file
+          bằng chứng trực tiếp cho BQL.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="danger">
+
+    <strong>⚠️ Lưu ý quan trọng</strong>
+
+    <p>
+      Việc gửi yêu cầu hỗ trợ không đồng nghĩa với việc
+      tự động được miễn.
+      BQL sẽ xem xét từng trường hợp và xác nhận sau khi
+      kiểm tra nhiệm vụ và bằng chứng.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HỖ TRỢ
+===================================================== -->
+
+<section id="clb-page-support" class="page">
+
+  <div class="hero">
+
+    <h2>💚 Hệ thống hỗ trợ</h2>
+
+    <p>
+      Hai cơ chế dưới đây được xem xét riêng vì chúng giải quyết
+      hai vấn đề khác nhau.
+    </p>
+
+  </div>
+
+
+  <div class="grid">
+
+
+    <!-- QUỸ -->
+
+    <div class="card support-card">
+
+      <div class="icon">💰</div>
+
+      <h3>Hỗ trợ Quỹ CLB</h3>
+
+      <p>
+        Đây là cơ chế dành cho thành viên
+        <strong>thực sự cần hỗ trợ tài chính</strong>
+        và không thể đóng khoản đóng góp Quỹ CLB tại thời điểm đó.
+      </p>
+
+
+      <div class="detail-section">
+
+        <h4>👤 Khi nào nên xin?</h4>
+
+        <ul>
+
+          <li>
+            Bạn thực sự gặp khó khăn về khả năng đóng góp.
+          </li>
+
+          <li>
+            Khoản đóng góp hiện tại vượt quá khả năng của bạn.
+          </li>
+
+          <li>
+            Bạn muốn xin hỗ trợ minh bạch thay vì tự ý không đóng.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="detail-section">
+
+        <h4>📝 Khi xin hỗ trợ cần làm gì?</h4>
+
+        <ol>
+
+          <li>Nêu rõ lý do.</li>
+
+          <li>Nêu khoản muốn được hỗ trợ.</li>
+
+          <li>Trao đổi với BQL.</li>
+
+          <li>Chọn nhiệm vụ phù hợp nếu được yêu cầu.</li>
+
+          <li>Hoàn thành nhiệm vụ.</li>
+
+          <li>Gửi bằng chứng.</li>
+
+        </ol>
+
+      </div>
+
+
+      <div class="notice">
+
+        <strong>💡 Quan trọng:</strong>
+
+        Hỗ trợ Quỹ không phải là cách để
+        mọi thành viên đều được miễn đóng.
+        Cơ chế này dành cho trường hợp thực sự cần hỗ trợ.
+
+      </div>
+
+    </div>
+
+
+
+    <!-- VẮNG -->
+
+    <div class="card absence-card">
+
+      <div class="icon">🔴</div>
+
+      <h3>Hỗ trợ Vắng không phép</h3>
+
+      <p>
+        Cơ chế này liên quan đến
+        <strong>trách nhiệm tham gia hoạt động</strong>,
+        không phải khả năng tài chính.
+      </p>
+
+
+      <div class="detail-section">
+
+        <h4>📌 Nguyên tắc cơ bản</h4>
+
+        <ul>
+
+          <li>
+            01 lần vắng không phép → 01 nhiệm vụ.
+          </li>
+
+          <li>
+            Nhiệm vụ phải được hoàn thành đầy đủ.
+          </li>
+
+          <li>
+            Phải có bằng chứng chứng minh.
+          </li>
+
+          <li>
+            BQL kiểm tra trước khi xác nhận.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="detail-section">
+
+        <h4>📈 Nếu vắng nhiều lần?</h4>
+
+        <p>
+          Không mặc định cho tất cả trường hợp làm cùng một
+          nhiệm vụ đơn giản.
+        </p>
+
+        <p>
+          Khi số lần vắng tăng,
+          BQL có thể nâng cấp nhiệm vụ,
+          yêu cầu sản phẩm khó hơn hoặc
+          yêu cầu nhiệm vụ kéo dài nhiều ngày.
+        </p>
+
+      </div>
+
+
+      <div class="danger">
+
+        <strong>🔴 Mục tiêu:</strong>
+
+        Không phải làm khó thành viên,
+        mà để mức độ trách nhiệm tương xứng
+        với tình trạng vắng của thành viên.
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <h2 class="section-title">
+    🎯 Mức độ hỗ trợ theo hoàn cảnh
+  </h2>
+
+
+  <div class="grid">
+
+
+    <div class="card student-card">
+
+      <div class="icon">🎒</div>
+
+      <h3>Học sinh</h3>
+
+      <p>
+        Nhiệm vụ ưu tiên sự chăm chỉ,
+        tính kỷ luật và quá trình tự thực hiện.
+      </p>
+
+      <ul>
+
+        <li>Video timelapse làm bài tập.</li>
+
+        <li>Hoàn thành một bộ đề theo yêu cầu.</li>
+
+        <li>Video trình bày cách giải một số câu.</li>
+
+        <li>Nhật ký học tập nhiều ngày.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>🎥 Bằng chứng:</strong>
+
+        Quay video quá trình làm,
+        timelapse hoặc video trình bày kết quả.
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+
+      <div class="icon">🎓</div>
+
+      <h3>Sinh viên</h3>
+
+      <p>
+        Nhiệm vụ cần mức độ chủ động,
+        tư duy và khả năng tạo ra sản phẩm.
+      </p>
+
+      <ul>
+
+        <li>Thuyết trình một chủ đề chuyên ngành.</li>
+
+        <li>Tạo infographic hoặc tài liệu hướng dẫn.</li>
+
+        <li>Phân tích một vấn đề thực tế.</li>
+
+        <li>Xây dựng một ý tưởng có khả năng áp dụng.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>🎥 Bằng chứng:</strong>
+
+        Video trình bày + sản phẩm/file
+        hoặc quay màn hình quá trình thực hiện.
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card worker-card">
+
+      <div class="icon">💼</div>
+
+      <h3>Người đi làm</h3>
+
+      <p>
+        Nhiệm vụ khó hơn, tận dụng kinh nghiệm,
+        kỹ năng hoặc chuyên môn thực tế.
+      </p>
+
+      <ul>
+
+        <li>Xây dựng tài liệu hướng dẫn.</li>
+
+        <li>Tạo checklist hoặc quy trình.</li>
+
+        <li>Chia sẻ kinh nghiệm chuyên môn.</li>
+
+        <li>Tạo sản phẩm có thể giúp thành viên khác.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>🎥 Bằng chứng:</strong>
+
+        Video trình bày trực tiếp + sản phẩm
+        hoặc quá trình xây dựng.
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <h2 class="section-title">
+    📝 Quy trình đăng ký hỗ trợ
+  </h2>
+
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="step-number">1</div>
+
+      <div>
+
+        <strong>Nói rõ bạn cần hỗ trợ gì</strong>
+
+        <p>
+          Hỗ trợ Quỹ CLB hay xử lý Vắng không phép?
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">2</div>
+
+      <div>
+
+        <strong>Trình bày hoàn cảnh</strong>
+
+        <p>
+          Nêu lý do trung thực và đủ để BQL hiểu trường hợp.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">3</div>
+
+      <div>
+
+        <strong>Nhận nhiệm vụ</strong>
+
+        <p>
+          BQL có thể chỉ định hoặc thống nhất nhiệm vụ phù hợp.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">4</div>
+
+      <div>
+
+        <strong>Thực hiện</strong>
+
+        <p>
+          Tự làm nhiệm vụ và ghi lại quá trình nếu nhiệm vụ yêu cầu.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">5</div>
+
+      <div>
+
+        <strong>Gửi bằng chứng</strong>
+
+        <p>
+          Gửi video/file/ảnh cho BQL qua tin nhắn cá nhân.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">6</div>
+
+      <div>
+
+        <strong>BQL xác nhận</strong>
+
+        <p>
+          Sau khi kiểm tra, BQL quyết định nhiệm vụ đã đạt
+          và hỗ trợ có được xác nhận hay không.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRA CỨU NHIỆM VỤ
+===================================================== -->
+
+<section id="clb-page-tasks" class="page">
+
+  <div class="hero">
+
+    <h2>📚 Tra cứu & theo dõi nhiệm vụ</h2>
+
+    <p>
+      Đây là khu vực để thành viên xem toàn bộ nhiệm vụ có thể được
+      sử dụng trong hệ thống hỗ trợ.
+    </p>
+
+    <p>
+      <strong>
+        Không chỉ xem tên nhiệm vụ:
+      </strong>
+      mỗi nhiệm vụ đều có cấp độ, mục đích, người phù hợp,
+      yêu cầu bắt buộc, bằng chứng, điều được phép,
+      điều không được phép, tiêu chí xét duyệt
+      và trường hợp đặc biệt.
+    </p>
+
+  </div>
+
+
+  <div class="task-toolbar">
+
+    <input
+      id="clb-task-search"
+      type="text"
+      placeholder="🔎 Tìm nhiệm vụ... Ví dụ: video, hát, bài tập, ý tưởng..."
+    >
+
+
+    <select id="clb-level-filter">
+
+      <option value="all">
+        📊 Tất cả cấp độ
+      </option>
+
+      <option value="1">
+        Cấp 1 — Cơ bản
+      </option>
+
+      <option value="2">
+        Cấp 2 — Trung bình
+      </option>
+
+      <option value="3">
+        Cấp 3 — Khó
+      </option>
+
+      <option value="4">
+        Cấp 4 — Thử thách
+      </option>
+
+    </select>
+
+
+    <div class="filter-row">
+
+      <button class="filter active" data-category="all">
+        📚 Tất cả
+      </button>
+
+      <button class="filter" data-category="absence">
+        🔴 Vắng không phép
+      </button>
+
+      <button class="filter" data-category="fund">
+        💚 Hỗ trợ Quỹ
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div id="clb-task-count" class="task-count"></div>
+
+  <div id="clb-task-list" class="grid"></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section id="clb-page-faq" class="page">
+
+  <div class="hero">
+
+    <h2>❓ Câu hỏi thường gặp</h2>
+
+    <p>
+      Tìm câu hỏi bạn cần hoặc mở từng mục để xem giải thích.
+    </p>
+
+  </div>
+
+
+  <div class="faq-search">
+
+    <input
+      id="clb-faq-search"
+      type="text"
+      placeholder="🔎 Tìm câu hỏi..."
+    >
+
+  </div>
+
+
+  <div id="clb-faq-list"></div>
+
+</section>
+
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+  <h3>🍀 CLB Vươn 5 Giờ Sáng</h3>
+
+  <p>
+    Hỗ trợ để cùng tiến bộ — trách nhiệm để cùng trưởng thành.
+  </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     MODAL
+===================================================== -->
+
+<div id="clb-task-modal" class="modal">
+
+  <div class="modal-box">
+
+    <button class="close" id="clb-close-modal">
+      ×
+    </button>
+
+    <div id="clb-task-detail"></div>
+
+  </div>
+
+</div>
+
+
+
+<script>
+(function(){
+
+"use strict";
+
+
+/* =====================================================
+   DỮ LIỆU NHIỆM VỤ
+===================================================== */
+
+const tasks = [
+
+{
+ id:"T01",
+ title:"🎥 Video chia sẻ kiến thức",
+ level:1,
+ categories:["absence"],
+ duration:"2–5 phút",
+ evidenceShort:"Video quay trực tiếp",
+
+ purpose:
+ "Thành viên tự tìm hiểu một kiến thức hữu ích rồi trình bày lại bằng lời của mình. Nhiệm vụ này biến thời gian bồi hoàn trách nhiệm thành một sản phẩm có giá trị học tập.",
+
+ audience:
+ "Phù hợp với trường hợp Vắng không phép ở mức cơ bản.",
+
+ requirements:[
+  "Chọn một chủ đề có giá trị học tập hoặc phát triển bản thân.",
+  "Tự tìm hiểu nội dung trước khi quay.",
+  "Tự trình bày bằng tiếng Việt.",
+  "Thời lượng khoảng 2–5 phút.",
+  "Phải thể hiện rằng thành viên hiểu điều mình đang nói."
+ ],
+
+ evidence:[
+  "Quay video có hình ảnh và/hoặc giọng nói của chính thành viên.",
+  "Gửi video hoàn chỉnh cho BQL.",
+  "Nếu video dài, có thể chia thành các đoạn hợp lý.",
+  "Nếu chia đoạn, các đoạn phải thể hiện đầy đủ nội dung."
+ ],
+
+ allowed:[
+  "Được đọc tài liệu để chuẩn bị.",
+  "Được tham khảo sách hoặc Internet.",
+  "Được sử dụng công cụ hỗ trợ để tìm hiểu.",
+  "Có thể chuẩn bị dàn ý trước khi quay."
+ ],
+
+ forbidden:[
+  "Không lấy nguyên video của người khác.",
+  "Không sử dụng giọng người khác thay mình.",
+  "Không nhờ người khác nói thay toàn bộ.",
+  "Không chỉ bật một video có sẵn rồi gửi lại."
+ ],
+
+ criteria:[
+  "Có bằng chứng rõ ràng.",
+  "Thành viên trực tiếp trình bày.",
+  "Nội dung được tự diễn đạt.",
+  "Thành viên hiểu nội dung.",
+  "Đủ thời lượng và yêu cầu."
+ ],
+
+ special:
+ "Nếu thành viên không thể quay video vì lý do chính đáng, cần trao đổi với BQL trước khi thực hiện."
+},
+
+
+{
+ id:"T02",
+ title:"📝 Bản kiểm điểm + kế hoạch sửa đổi",
+ level:1,
+ categories:["absence"],
+ duration:"Khoảng 1 trang",
+ evidenceShort:"Ảnh/video quá trình hoặc file hoàn chỉnh",
+
+ purpose:
+ "Giúp thành viên nhìn lại nguyên nhân vắng, nhận diện trách nhiệm và xây dựng kế hoạch để không lặp lại tình trạng tương tự.",
+
+ audience:
+ "Phù hợp với Vắng không phép ở mức cơ bản.",
+
+ requirements:[
+  "Nêu rõ ngày hoặc trường hợp vắng.",
+  "Nêu nguyên nhân.",
+  "Nêu mình sai hoặc thiếu sót ở đâu.",
+  "Nêu ảnh hưởng của việc vắng.",
+  "Đưa ra ít nhất 3 hành động cụ thể để tránh lặp lại.",
+  "Viết bằng tiếng Việt và bằng lời của chính mình."
+ ],
+
+ evidence:[
+  "Nếu viết tay: quay video quá trình viết hoặc chụp ảnh rõ ràng.",
+  "Nếu đánh máy: có thể quay màn hình quá trình thực hiện.",
+  "Gửi bản hoàn chỉnh cho BQL.",
+  "Nếu BQL yêu cầu, có thể cần giải thích lại nội dung."
+ ],
+
+ allowed:[
+  "Có thể tham khảo cách lập kế hoạch.",
+  "Có thể dùng AI để gợi ý cấu trúc.",
+  "Có thể tham khảo mẫu trình bày."
+ ],
+
+ forbidden:[
+  "Không sao chép nguyên văn bản của người khác.",
+  "Không gửi mẫu chung rồi chỉ thay tên.",
+  "Không bịa lý do.",
+  "Không thuê hoặc nhờ người khác viết thay toàn bộ."
+ ],
+
+ criteria:[
+  "Lý do rõ ràng.",
+  "Nhận diện được trách nhiệm.",
+  "Kế hoạch sửa đổi cụ thể.",
+  "Có bằng chứng thực hiện."
+ ],
+
+ special:
+ "BQL có thể yêu cầu viết lại nếu nội dung quá chung chung hoặc không thể hiện sự tự nhìn nhận."
+},
+
+
+{
+ id:"T03",
+ title:"🎙️ Hát / đọc thơ / đọc truyện",
+ level:1,
+ categories:["absence"],
+ duration:"2–5 phút",
+ evidenceShort:"Video trực tiếp",
+
+ purpose:
+ "Tạo một sản phẩm cá nhân nhỏ để thành viên chủ động đóng góp một giá trị tích cực cho tập thể.",
+
+ audience:
+ "Có thể áp dụng cho thành viên muốn thực hiện hình thức nghệ thuật.",
+
+ requirements:[
+  "Tự hát, đọc thơ hoặc đọc truyện.",
+  "Video phải thể hiện rõ phần giọng của thành viên.",
+  "Có thể chọn nội dung đơn giản và phù hợp.",
+  "Không yêu cầu phải hát hay hoặc chuyên nghiệp.",
+  "Phần thể hiện chính phải do thành viên thực hiện."
+ ],
+
+ evidence:[
+  "Quay video toàn bộ phần thực hiện.",
+  "Có thể sử dụng nhạc nền hoặc beat có sẵn.",
+  "Nếu nội dung dài, có thể chia thành các đoạn.",
+  "Các đoạn phải thể hiện rõ người thực hiện."
+ ],
+
+ allowed:[
+  "Có thể dùng beat hoặc nhạc nền.",
+  "Có thể chuẩn bị lời trước.",
+  "Có thể đọc theo tài liệu.",
+  "Có thể dùng điện thoại quay."
+ ],
+
+ forbidden:[
+  "Không sử dụng bản ghi âm giọng của người khác.",
+  "Không lấy nguyên phần hát của người khác rồi gửi lại.",
+  "Không gửi video không có phần thể hiện thực tế."
+ ],
+
+ criteria:[
+  "Giọng hát hoặc giọng đọc thực sự của thành viên.",
+  "Bằng chứng rõ ràng.",
+  "Hoàn thành đủ phần đã đăng ký."
+ ],
+
+ special:
+ "Mục tiêu không phải đánh giá khả năng ca hát. Điều quan trọng là thành viên thực sự tự thực hiện."
+},
+
+
+{
+ id:"T04",
+ title:"📖 Tóm tắt một bài học Zoom",
+ level:2,
+ categories:["absence"],
+ duration:"3–5 phút hoặc khoảng 1 trang",
+ evidenceShort:"Video hoặc văn bản + quá trình",
+
+ purpose:
+ "Biến một buổi học thành sản phẩm tổng kết, giúp thành viên chủ động ôn lại kiến thức thay vì chỉ hoàn thành nhiệm vụ cho có.",
+
+ audience:
+ "Phù hợp với trường hợp cần mức trách nhiệm trung bình.",
+
+ requirements:[
+  "Chọn một nội dung đã học.",
+  "Nêu ít nhất 3 kiến thức chính.",
+  "Giải thích bằng lời của mình.",
+  "Nêu ít nhất 1 điều có thể áp dụng.",
+  "Không chỉ chép lại nội dung."
+ ],
+
+ evidence:[
+  "Có thể quay video trình bày.",
+  "Hoặc viết bản tóm tắt.",
+  "Nếu đánh máy, nên quay quá trình thực hiện.",
+  "Nếu viết tay, quay hoặc chụp quá trình và bản hoàn chỉnh."
+ ],
+
+ allowed:[
+  "Được xem lại tài liệu.",
+  "Được xem lại nội dung buổi học.",
+  "Được tham khảo nguồn bên ngoài."
+ ],
+
+ forbidden:[
+  "Không sao chép nguyên văn bài học.",
+  "Không lấy bài của thành viên khác.",
+  "Không gửi nội dung không liên quan."
+ ],
+
+ criteria:[
+  "Có ít nhất 3 ý chính.",
+  "Có sự tự diễn đạt.",
+  "Có phần liên hệ hoặc thực hành.",
+  "Có bằng chứng."
+ ],
+
+ special:
+ "BQL có thể hỏi lại một vài câu để xác nhận thành viên thực sự hiểu nội dung."
+},
+
+
+{
+ id:"T05",
+ title:"🎬 Video chia sẻ suy nghĩ",
+ level:2,
+ categories:["absence"],
+ duration:"2–5 phút",
+ evidenceShort:"Video quay trực tiếp",
+
+ purpose:
+ "Giúp thành viên tự nhìn lại thói quen, trách nhiệm và điều mình cần thay đổi sau một lần vắng.",
+
+ audience:
+ "Phù hợp với Vắng không phép cần mức trách nhiệm trung bình.",
+
+ requirements:[
+  "Chọn một chủ đề liên quan đến trải nghiệm của bản thân.",
+  "Nêu điều học được sau lần vắng.",
+  "Nêu nguyên nhân.",
+  "Nêu điều muốn thay đổi.",
+  "Nêu cách thực hiện thay đổi."
+ ],
+
+ evidence:[
+  "Quay trực tiếp khuôn mặt và giọng nói.",
+  "Video khoảng 2–5 phút.",
+  "Không yêu cầu dựng chuyên nghiệp."
+ ],
+
+ allowed:[
+  "Có thể viết dàn ý trước.",
+  "Có thể chuẩn bị các ý chính.",
+  "Có thể quay lại nếu lần đầu chưa đạt."
+ ],
+
+ forbidden:[
+  "Không lấy video người khác.",
+  "Không dùng người khác nói thay.",
+  "Không đọc một đoạn văn không hiểu."
+ ],
+
+ criteria:[
+  "Có suy nghĩ cá nhân.",
+  "Có kế hoạch thay đổi.",
+  "Trình bày rõ ràng.",
+  "Có bằng chứng."
+ ],
+
+ special:
+ "Không đánh giá khả năng nói hay. Trọng tâm là sự chân thành và khả năng tự nhìn nhận."
+},
+
+
+{
+ id:"T06",
+ title:"🎨 Sản phẩm sáng tạo cá nhân",
+ level:2,
+ categories:["absence","fund"],
+ duration:"Theo sản phẩm",
+ evidenceShort:"Sản phẩm + ảnh/video quá trình",
+
+ purpose:
+ "Tạo ra một sản phẩm thực tế do thành viên tự xây dựng, có thể mang giá trị học tập, truyền thông hoặc hỗ trợ tập thể.",
+
+ audience:
+ "Có thể dùng cho Vắng không phép hoặc Hỗ trợ Quỹ nếu BQL phê duyệt.",
+
+ requirements:[
+  "Tự chọn hình thức: poster, tranh, infographic, slide, mindmap...",
+  "Tự xây dựng nội dung.",
+  "Sản phẩm phải có mục đích rõ ràng.",
+  "Có bằng chứng quá trình thực hiện."
+ ],
+
+ evidence:[
+  "Gửi sản phẩm hoàn chỉnh.",
+  "Gửi video hoặc ảnh quá trình làm.",
+  "Nếu làm trên máy tính, có thể quay màn hình.",
+  "Nếu làm thủ công, có thể quay quá trình thực hiện."
+ ],
+
+ allowed:[
+  "Có thể tham khảo ý tưởng.",
+  "Có thể dùng công cụ thiết kế.",
+  "Có thể sử dụng tài liệu làm nguồn tham khảo."
+ ],
+
+ forbidden:[
+  "Không tải nguyên sản phẩm của người khác.",
+  "Không chỉ đổi màu hoặc đổi tên sản phẩm có sẵn.",
+  "Không nhận sản phẩm do người khác làm hộ."
+ ],
+
+ criteria:[
+  "Có sản phẩm thực tế.",
+  "Có dấu hiệu của quá trình tự làm.",
+  "Nội dung phù hợp.",
+  "Có tính cá nhân."
+ ],
+
+ special:
+ "BQL có thể yêu cầu thành viên giải thích sản phẩm để xác nhận quá trình thực hiện."
+},
+
+
+{
+ id:"T07",
+ title:"💡 Video trình bày một ý tưởng",
+ level:3,
+ categories:["fund","absence"],
+ duration:"3–7 phút",
+ evidenceShort:"Video trực tiếp + sản phẩm/dàn ý",
+
+ purpose:
+ "Đánh giá khả năng tự suy nghĩ, giải quyết vấn đề và tạo ra một ý tưởng có giá trị.",
+
+ audience:
+ "Phù hợp với trường hợp cần nhiệm vụ khó hơn hoặc Hỗ trợ Quỹ ở mức cao.",
+
+ requirements:[
+  "Tự nghĩ ra một ý tưởng.",
+  "Nêu vấn đề.",
+  "Giải thích giải pháp.",
+  "Nêu cách triển khai.",
+  "Nêu lợi ích.",
+  "Nêu khó khăn có thể gặp.",
+  "Đưa ra phương án xử lý khó khăn."
+ ],
+
+ evidence:[
+  "Quay video thành viên trực tiếp trình bày.",
+  "Có thể sử dụng slide hoặc giấy.",
+  "Gửi thêm file nếu có.",
+  "Video cần thể hiện rõ người trình bày."
+ ],
+
+ allowed:[
+  "Được tham khảo các mô hình khác.",
+  "Được dùng công cụ thiết kế.",
+  "Được hỏi người khác để góp ý."
+ ],
+
+ forbidden:[
+  "Không lấy nguyên ý tưởng và bài thuyết trình của người khác.",
+  "Không nhờ người khác trình bày thay.",
+  "Không chỉ đọc nội dung sao chép."
+ ],
+
+ criteria:[
+  "Ý tưởng có tính cá nhân.",
+  "Có cấu trúc rõ ràng.",
+  "Có khả năng triển khai.",
+  "Thành viên hiểu điều mình trình bày."
+ ],
+
+ special:
+ "BQL có thể đặt câu hỏi sau video để kiểm tra mức độ hiểu."
+},
+
+
+{
+ id:"T08",
+ title:"📅 Thử thách thay đổi trong nhiều ngày",
+ level:4,
+ categories:["absence","fund"],
+ duration:"3–7 ngày hoặc theo BQL",
+ evidenceShort:"Nhật ký + video/ảnh theo quá trình",
+
+ purpose:
+ "Dành cho trường hợp cần mức cam kết cao, đặc biệt khi thành viên vắng nhiều lần hoặc trường hợp hỗ trợ cần một nhiệm vụ có giá trị lớn hơn.",
+
+ audience:
+ "Không phải nhiệm vụ mặc định. BQL quyết định khi nào cần áp dụng.",
+
+ requirements:[
+  "Chọn một hành vi cụ thể muốn thay đổi.",
+  "Cam kết thời gian thực hiện.",
+  "Ghi lại quá trình mỗi ngày.",
+  "Có bằng chứng cho từng giai đoạn.",
+  "Cuối kỳ tổng kết kết quả.",
+  "Nêu điều đã làm được và chưa làm được."
+ ],
+
+ evidence:[
+  "Video hoặc ảnh theo từng ngày.",
+  "Nhật ký ngắn.",
+  "Video tổng kết cuối kỳ.",
+  "Có thể quay timelapse hoặc quá trình nếu phù hợp."
+ ],
+
+ allowed:[
+  "Có thể sử dụng công cụ hỗ trợ ghi chép.",
+  "Có thể nhờ người thân nhắc nhở.",
+  "Có thể dùng ứng dụng theo dõi thói quen."
+ ],
+
+ forbidden:[
+  "Không tạo toàn bộ bằng chứng sau khi nhiệm vụ kết thúc.",
+  "Không sử dụng ảnh hoặc video cũ.",
+  "Không nhờ người khác thực hiện thay."
+ ],
+
+ criteria:[
+  "Có quá trình liên tục.",
+  "Bằng chứng phù hợp từng ngày.",
+  "Có sự thay đổi hoặc nỗ lực thực tế.",
+  "Có tổng kết."
+ ],
+
+ special:
+ "Nếu thành viên bỏ giữa chừng, BQL có thể xem xét mức độ đã thực hiện để quyết định bổ sung, làm lại hoặc điều chỉnh."
+},
+
+
+{
+ id:"T09",
+ title:"🎓 Nhiệm vụ chuyên môn — Sinh viên",
+ level:3,
+ categories:["fund"],
+ duration:"Theo nhiệm vụ",
+ evidenceShort:"Video + sản phẩm",
+
+ purpose:
+ "Dành cho sinh viên xin Hỗ trợ Quỹ và có khả năng sử dụng kiến thức học tập để tạo ra một sản phẩm thực tế.",
+
+ audience:
+ "Sinh viên có nhu cầu Hỗ trợ Quỹ CLB.",
+
+ requirements:[
+  "Tạo một sản phẩm liên quan đến ngành học hoặc kỹ năng đang học.",
+  "Giải thích sản phẩm.",
+  "Nêu cách sản phẩm có thể hữu ích.",
+  "Tự thực hiện phần cốt lõi.",
+  "Có thể giải thích lại khi BQL hỏi."
+ ],
+
+ evidence:[
+  "Video trình bày trực tiếp.",
+  "File sản phẩm.",
+  "Có thể quay màn hình quá trình làm."
+ ],
+
+ allowed:[
+  "Có thể tham khảo tài liệu chuyên ngành.",
+  "Có thể dùng công cụ hỗ trợ.",
+  "Có thể nhận góp ý."
+ ],
+
+ forbidden:[
+  "Không nộp sản phẩm do người khác làm.",
+  "Không lấy nguyên sản phẩm trên mạng.",
+  "Không nhờ người khác làm toàn bộ."
+ ],
+
+ criteria:[
+  "Có giá trị thực tế.",
+  "Có phần tự thực hiện rõ.",
+  "Giải thích được sản phẩm.",
+  "Có bằng chứng."
+ ],
+
+ special:
+ "BQL có thể điều chỉnh nhiệm vụ dựa trên ngành học và điều kiện thực tế của thành viên."
+},
+
+
+{
+ id:"T10",
+ title:"💼 Sản phẩm giá trị thực tế — Người đi làm",
+ level:4,
+ categories:["fund"],
+ duration:"Theo nhiệm vụ",
+ evidenceShort:"Video trình bày + sản phẩm",
+
+ purpose:
+ "Dành cho người đi làm xin Hỗ trợ Quỹ. Nhiệm vụ tận dụng kinh nghiệm thực tế để tạo ra một giá trị có ích cho người khác hoặc cho CLB.",
+
+ audience:
+ "Người đi làm có nhu cầu Hỗ trợ Quỹ CLB.",
+
+ requirements:[
+  "Tạo một sản phẩm dựa trên kinh nghiệm hoặc chuyên môn.",
+  "Có thể là tài liệu hướng dẫn, quy trình, checklist, bài chia sẻ chuyên môn...",
+  "Giải thích cách sản phẩm giúp ích cho người khác.",
+  "Tự chịu trách nhiệm về nội dung.",
+  "Có khả năng trình bày và giải thích sản phẩm."
+ ],
+
+ evidence:[
+  "Video trực tiếp trình bày.",
+  "File sản phẩm.",
+  "Có thể quay màn hình quá trình xây dựng."
+ ],
+
+ allowed:[
+  "Có thể tham khảo nguồn chuyên môn.",
+  "Có thể sử dụng công cụ hỗ trợ.",
+  "Có thể nhận góp ý từ đồng nghiệp."
+ ],
+
+ forbidden:[
+  "Không lấy tài liệu nội bộ của công ty nếu không được phép.",
+  "Không sao chép nguyên tài liệu của người khác.",
+  "Không nhờ người khác làm toàn bộ."
+ ],
+
+ criteria:[
+  "Có giá trị thực tế.",
+  "Thể hiện được kinh nghiệm hoặc chuyên môn.",
+  "Có sản phẩm cụ thể.",
+  "Có khả năng áp dụng.",
+  "Thành viên hiểu rõ sản phẩm."
+ ],
+
+ special:
+ "BQL có thể trao đổi riêng để thiết kế nhiệm vụ phù hợp với nghề nghiệp của thành viên."
+}
+
+];
+
+
+
+/* =====================================================
+   CẤP ĐỘ
+===================================================== */
+
+const levelNames={
+  1:"Cơ bản",
+  2:"Trung bình",
+  3:"Khó",
+  4:"Thử thách"
+};
+
+
+let currentCategory="all";
+
+
+
+/* =====================================================
+   HIỂN THỊ TRANG
+===================================================== */
+
+function showPage(page){
+
+  document
+    .querySelectorAll("#clb-vuon5gio .page")
+    .forEach(function(el){
+      el.classList.remove("active");
+    });
+
+  const target=document.getElementById("clb-page-"+page);
+
+  if(target){
+    target.classList.add("active");
+  }
+
+
+  document
+    .querySelectorAll("#clb-vuon5gio .nav-btn")
+    .forEach(function(btn){
+      btn.classList.toggle(
+        "active",
+        btn.dataset.page===page
+      );
+    });
+
+
+  if(page==="tasks"){
+    renderTasks();
+  }
+
+  if(page==="faq"){
+    renderFAQ();
+  }
+
+
+  try{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  }catch(e){
+    window.scrollTo(0,0);
+  }
+}
+
+
+
+/* =====================================================
+   SỰ KIỆN NAV
+===================================================== */
+
+document
+  .querySelectorAll("#clb-vuon5gio [data-page]")
+  .forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+      showPage(this.dataset.page);
+
+    });
+
+  });
+
+
+
+/* =====================================================
+   HIỂN THỊ NHIỆM VỤ
+===================================================== */
+
+function getLevelName(level){
+
+  return levelNames[level] || "Chưa phân loại";
+
+}
+
+
+function categoryLabel(category){
+
+  if(category==="absence"){
+    return "🔴 Vắng không phép";
+  }
+
+  if(category==="fund"){
+    return "💚 Hỗ trợ Quỹ";
+  }
+
+  return "📚 Nhiệm vụ";
+
+}
+
+
+function renderTasks(){
+
+  const searchInput=document.getElementById("clb-task-search");
+
+  const levelInput=document.getElementById("clb-level-filter");
+
+  const list=document.getElementById("clb-task-list");
+
+  const count=document.getElementById("clb-task-count");
+
+
+  if(!searchInput || !levelInput || !list){
+    return;
+  }
+
+
+  const search=searchInput.value
+    .trim()
+    .toLowerCase();
+
+  const level=levelInput.value;
+
+
+  const filtered=tasks.filter(function(task){
+
+    const searchable=[
+      task.id,
+      task.title,
+      task.purpose,
+      task.audience,
+      task.duration
+    ]
+    .join(" ")
+    .toLowerCase();
+
+
+    const matchSearch=
+      !search ||
+      searchable.includes(search);
+
+
+    const matchLevel=
+      level==="all" ||
+      String(task.level)===String(level);
+
+
+    const matchCategory=
+      currentCategory==="all" ||
+      task.categories.includes(currentCategory);
+
+
+    return matchSearch &&
+           matchLevel &&
+           matchCategory;
+
+  });
+
+
+  count.textContent=
+    "📌 Đang hiển thị "+
+    filtered.length+
+    "/"+
+    tasks.length+
+    " nhiệm vụ";
+
+
+  if(filtered.length===0){
+
+    list.innerHTML=`
+
+      <div class="card empty">
+
+        <div class="icon">🔎</div>
+
+        <h3>Không tìm thấy nhiệm vụ</h3>
+
+        <p>
+          Hãy thử đổi từ khóa, cấp độ hoặc loại hỗ trợ.
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+  }
+
+
+  list.innerHTML=filtered.map(function(task){
+
+    return `
+
+      <div class="card task-card">
+
+        <div class="task-code">
+          ${task.id}
+        </div>
+
+        <span class="level level${task.level}">
+          📊 Cấp ${task.level} —
+          ${getLevelName(task.level)}
+        </span>
+
+        <h3>
+          ${task.title}
+        </h3>
+
+        <p>
+          ${task.purpose}
+        </p>
+
+        <div>
+
+          ${task.categories.map(function(cat){
+
+            return `
+              <span class="tag">
+                ${categoryLabel(cat)}
+              </span>
+            `;
+
+          }).join("")}
+
+        </div>
+
+        <p class="small">
+          ⏱️ ${task.duration}
+        </p>
+
+        <p class="small">
+          📹 ${task.evidenceShort}
+        </p>
+
+        <button
+          class="btn btn-green"
+          data-task-id="${task.id}">
+          🔎 Xem toàn bộ yêu cầu
+        </button>
+
+      </div>
+
+    `;
+
+  }).join("");
+
+
+  list
+    .querySelectorAll("[data-task-id]")
+    .forEach(function(btn){
+
+      btn.addEventListener("click",function(){
+
+        openTask(this.dataset.taskId);
+
+      });
+
+    });
+
+}
+
+
+
+/* =====================================================
+   BỘ LỌC
+===================================================== */
+
+document
+  .querySelectorAll("#clb-vuon5gio .filter")
+  .forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+      currentCategory=this.dataset.category;
+
+
+      document
+        .querySelectorAll("#clb-vuon5gio .filter")
+        .forEach(function(item){
+
+          item.classList.remove("active");
+
+        });
+
+
+      this.classList.add("active");
+
+      renderTasks();
+
+    });
+
+  });
+
+
+
+document
+  .getElementById("clb-task-search")
+  .addEventListener("input",renderTasks);
+
+
+document
+  .getElementById("clb-level-filter")
+  .addEventListener("change",renderTasks);
+
+
+
+/* =====================================================
+   CHI TIẾT NHIỆM VỤ
+===================================================== */
+
+function makeList(items){
+
+  return items
+    .map(function(item){
+      return "<li>"+item+"</li>";
+    })
+    .join("");
+
+}
+
+
+function openTask(id){
+
+  const task=tasks.find(function(t){
+    return t.id===id;
+  });
+
+
+  if(!task){
+    return;
+  }
+
+
+  const detail=document.getElementById("clb-task-detail");
+
+
+  detail.innerHTML=`
+
+    <div class="task-code">
+      Mã nhiệm vụ: ${task.id}
+    </div>
+
+    <span class="level level${task.level}">
+      📊 Cấp ${task.level} —
+      ${getLevelName(task.level)}
+    </span>
+
+    <h2>
+      ${task.title}
+    </h2>
+
+    <p class="small">
+      ⏱️ Thời lượng: ${task.duration}
+    </p>
+
+
+    <div class="detail-section">
+
+      <h4>
+        🎯 Nhiệm vụ này dùng để làm gì?
+      </h4>
+
+      <p>
+        ${task.purpose}
+      </p>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h4>
+        👤 Ai có thể thực hiện?
+      </h4>
+
+      <p>
+        ${task.audience}
+      </p>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h4>
+        📋 Yêu cầu bắt buộc
+      </h4>
+
+      <ul>
+        ${makeList(task.requirements)}
+      </ul>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h4>
+        📹 Bằng chứng cần nộp
+      </h4>
+
+      <ul>
+        ${makeList(task.evidence)}
+      </ul>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h4>
+        🤝 Được phép hỗ trợ
+      </h4>
+
+      <ul>
+        ${makeList(task.allowed)}
+      </ul>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h4>
+        🚫 Những điều không được làm
+      </h4>
+
+      <ul>
+        ${makeList(task.forbidden)}
+      </ul>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h4>
+        ✅ Tiêu chí để được xác nhận
+      </h4>
+
+      <ul>
+        ${makeList(task.criteria)}
+      </ul>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h4>
+        ⚠️ Trường hợp đặc biệt
+      </h4>
+
+      <p>
+        ${task.special}
+      </p>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h4>
+        ☑️ Checklist trước khi gửi
+      </h4>
+
+      <ul class="checklist">
+
+        <li>□ Tôi đã tự thực hiện nhiệm vụ.</li>
+
+        <li>□ Tôi đã hoàn thành đầy đủ yêu cầu.</li>
+
+        <li>□ Tôi đã chuẩn bị đúng loại bằng chứng.</li>
+
+        <li>□ Bằng chứng thể hiện được quá trình thực hiện.</li>
+
+        <li>□ Tôi không sử dụng sản phẩm của người khác.</li>
+
+        <li>□ Tôi đã kiểm tra lại trước khi gửi.</li>
+
+        <li>□ Tôi có thể giải thích sản phẩm nếu BQL hỏi.</li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="danger">
+
+      <strong>🔴 Quan trọng:</strong>
+
+      <p>
+        Nếu bằng chứng không rõ ràng hoặc có dấu hiệu
+        không phản ánh đúng quá trình thực hiện,
+        BQL có thể yêu cầu giải trình,
+        bổ sung hoặc thực hiện lại nhiệm vụ.
+      </p>
+
+    </div>
+
+  `;
+
+
+  document
+    .getElementById("clb-task-modal")
+    .classList.add("show");
+
+}
+
+
+
+/* =====================================================
+   ĐÓNG MODAL
+===================================================== */
+
+function closeTask(){
+
+  document
+    .getElementById("clb-task-modal")
+    .classList.remove("show");
+
+}
+
+
+document
+  .getElementById("clb-close-modal")
+  .addEventListener("click",closeTask);
+
+
+document
+  .getElementById("clb-task-modal")
+  .addEventListener("click",function(e){
+
+    if(e.target===this){
+      closeTask();
+    }
+
+  });
+
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key==="Escape"){
+    closeTask();
+  }
+
+});
+
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+const faqs=[
+
+[
+"💰 Hỗ trợ Quỹ CLB là gì?",
+"Hỗ trợ Quỹ CLB là cơ chế dành cho thành viên thực sự gặp khó khăn về tài chính và không thể đóng khoản đóng góp vào Quỹ CLB tại thời điểm đó. Thành viên cần trình bày hoàn cảnh và thực hiện nhiệm vụ nếu BQL yêu cầu."
+],
+
+
+[
+"🔴 Vắng không phép khác gì Hỗ trợ Quỹ?",
+"Vắng không phép liên quan đến trách nhiệm tham gia hoạt động. Hỗ trợ Quỹ liên quan đến khả năng đóng khoản đóng góp. Hai cơ chế này được xem xét riêng."
+],
+
+
+[
+"📊 Vì sao nhiệm vụ có cấp độ?",
+"Để mức độ trách nhiệm có thể tương xứng với từng trường hợp. Không phải tất cả trường hợp đều chỉ thực hiện một nhiệm vụ đơn giản."
+],
+
+
+[
+"📈 Nếu vắng nhiều lần thì sao?",
+"BQL có thể nâng cấp độ nhiệm vụ hoặc yêu cầu một nhiệm vụ kéo dài nhiều ngày. Mức độ sẽ được xem xét theo trường hợp cụ thể."
+],
+
+
+[
+"❓ Ai quyết định tôi phải làm nhiệm vụ nào?",
+"BQL xem xét loại hỗ trợ, số lần vắng, hoàn cảnh, khả năng của thành viên và mức độ phù hợp của nhiệm vụ để quyết định hoặc thống nhất nhiệm vụ."
+],
+
+
+[
+"🎥 Có bắt buộc quay video không?",
+"Tùy nhiệm vụ. Những nhiệm vụ cần chứng minh quá trình hoặc khả năng trình bày thường yêu cầu video. Nhiệm vụ viết hoặc sản phẩm có thể dùng ảnh/file kết hợp video quá trình."
+],
+
+
+[
+"📹 Nếu đánh máy thì chứng minh thế nào?",
+"Có thể quay màn hình quá trình đánh máy hoặc quay video quá trình thực hiện. Mục đích là giúp BQL có cơ sở xác nhận thành viên thực sự làm."
+],
+
+
+[
+"✍️ Nếu viết tay thì sao?",
+"Có thể quay video quá trình viết hoặc chụp ảnh rõ ràng sản phẩm. Với một số nhiệm vụ, BQL có thể yêu cầu quay quá trình."
+],
+
+
+[
+"🎙️ Tôi không hát hay thì có được chọn nhiệm vụ hát không?",
+"Có. Nhiệm vụ này không nhằm đánh giá khả năng ca hát chuyên nghiệp. Điều quan trọng là chính thành viên thực sự hát hoặc đọc và có bằng chứng rõ ràng."
+],
+
+
+[
+"✂️ Video có được cắt không?",
+"Có thể chia video thành các đoạn khi video quá dài. Tuy nhiên không được cắt ghép theo cách làm sai lệch quá trình thực hiện."
+],
+
+
+[
+"🤖 Có được dùng AI không?",
+"Có thể dùng AI để tìm hiểu, tham khảo hoặc hỗ trợ. Tuy nhiên sản phẩm cuối cùng phải do thành viên hiểu và tự thực hiện. Không được để AI làm toàn bộ rồi nhận là sản phẩm của mình."
+],
+
+
+[
+"🎨 Có được lấy sản phẩm trên mạng không?",
+"Không. Có thể tham khảo ý tưởng hoặc nguồn thông tin nhưng sản phẩm nộp phải có phần tự xây dựng và tự thực hiện."
+],
+
+
+[
+"⏰ Nếu không hoàn thành đúng hạn thì sao?",
+"Hãy báo BQL càng sớm càng tốt. BQL có thể xem xét gia hạn, yêu cầu bổ sung hoặc điều chỉnh nhiệm vụ tùy lý do."
+],
+
+
+[
+"🔁 Nếu bằng chứng không đạt thì sao?",
+"BQL có thể yêu cầu bổ sung, giải thích hoặc thực hiện lại phần chưa đạt."
+],
+
+
+[
+"🧩 Nếu tôi có hoàn cảnh đặc biệt thì sao?",
+"Hãy trao đổi trực tiếp với BQL trước khi thực hiện. BQL có thể xem xét điều chỉnh nhiệm vụ hoặc hình thức bằng chứng nếu có lý do hợp lý."
+],
+
+
+[
+"🎒 Học sinh sẽ phải làm nhiệm vụ gì khi xin hỗ trợ Quỹ?",
+"Nhiệm vụ dành cho học sinh ưu tiên sự chăm chỉ và quá trình thực tế, ví dụ timelapse làm bài tập, hoàn thành bộ đề, trình bày cách giải hoặc nhật ký học tập."
+],
+
+
+[
+"🎓 Sinh viên sẽ phải làm gì?",
+"Sinh viên có thể được giao nhiệm vụ có độ khó cao hơn như thuyết trình chuyên ngành, phân tích vấn đề, tạo infographic, tài liệu hoặc một ý tưởng có khả năng áp dụng."
+],
+
+
+[
+"💼 Người đi làm sẽ phải làm gì?",
+"Người đi làm có thể được giao nhiệm vụ ở cấp cao hơn, tận dụng kinh nghiệm và chuyên môn như tạo tài liệu hướng dẫn, quy trình, checklist hoặc sản phẩm có giá trị thực tế."
+],
+
+
+[
+"💚 Nếu tôi thực sự khó khăn nhưng không thể làm nhiệm vụ thì sao?",
+"Hãy trao đổi trực tiếp với BQL. Không nên tự ý kết luận rằng mình được miễn hoặc tự bỏ qua yêu cầu."
+],
+
+
+[
+"📤 Tôi gửi bằng chứng cho ai?",
+"Thành viên trực tiếp gửi video, ảnh hoặc file bằng chứng cho BQL qua tin nhắn cá nhân. BQL sẽ kiểm tra và lưu trữ theo quy trình của CLB."
+],
+
+
+[
+"⚖️ BQL có thể thay đổi nhiệm vụ của tôi không?",
+"Có. BQL có thể điều chỉnh nhiệm vụ hoặc yêu cầu bổ sung để đảm bảo nhiệm vụ phù hợp với hoàn cảnh và mức độ trách nhiệm của từng trường hợp."
+]
+
+];
+
+
+function renderFAQ(){
+
+  const list=document.getElementById("clb-faq-list");
+
+  const searchInput=document.getElementById("clb-faq-search");
+
+  if(!list || !searchInput){
+    return;
+  }
+
+
+  const search=searchInput.value
+    .trim()
+    .toLowerCase();
+
+
+  const filtered=faqs.filter(function(faq){
+
+    return (
+      !search ||
+      faq[0].toLowerCase().includes(search) ||
+      faq[1].toLowerCase().includes(search)
+    );
+
+  });
+
+
+  if(filtered.length===0){
+
+    list.innerHTML=`
+
+      <div class="card empty">
+
+        <div class="icon">🔎</div>
+
+        <h3>Không tìm thấy câu hỏi</h3>
+
+        <p>
+          Thử một từ khóa khác nhé.
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  list.innerHTML=filtered.map(function(faq,index){
+
+    return `
+
+      <div class="faq">
+
+        <button class="faq-question">
+          ${faq[0]}
+          <span style="float:right;">＋</span>
+        </button>
+
+        <div class="faq-content">
+          ${faq[1]}
+        </div>
+
+      </div>
+
+    `;
+
+  }).join("");
+
+
+  list
+    .querySelectorAll(".faq-question")
+    .forEach(function(btn){
+
+      btn.addEventListener("click",function(){
+
+        const faq=this.parentElement;
+
+        faq.classList.toggle("open");
+
+        const icon=this.querySelector("span");
+
+        if(icon){
+          icon.textContent=
+            faq.classList.contains("open")
+            ? "−"
+            : "＋";
+        }
+
+      });
+
+    });
+
+}
+
+
+document
+  .getElementById("clb-faq-search")
+  .addEventListener("input",renderFAQ);
+
+
+
+/* =====================================================
+   KHỞI TẠO
+===================================================== */
+
+renderTasks();
+
+renderFAQ();
+
+})();
+</script>
+
+</div>
+</body>
+</html>
