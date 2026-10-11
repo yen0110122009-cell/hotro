@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#137a52"><title>Trung tâm nhiệm vụ | CLB Học tập 5H Sáng</title>
+<style>
+:root{--green:#198754;--green2:#e8f8ef;--red:#c62828;--red2:#fff0ef;--yellow:#fff2b8;--yellow-ink:#705400;--ink:#242424;--muted:#626b65;--line:#eadfdf;--paper:#fffafa;--white:#fff;--shadow:0 12px 34px #7f1d1d10}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:0 22px}.topbar{background:#fff;border-bottom:1px solid var(--line)}.topinner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.logo{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--green2);font-size:24px}.brand small{display:block;font-weight:600;color:var(--muted);font-size:12px}.pill{border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800;background:var(--green2);color:var(--green)}.hero{padding:34px 0 28px;background:linear-gradient(120deg,#fff0ef 0%,#fff 55%,#e8f8ef 100%)}.hero-grid{display:grid;grid-template-columns:1.45fr .8fr;gap:26px;align-items:center}.eyebrow{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.hero h1{font-size:clamp(28px,4vw,43px);line-height:1.13;letter-spacing:-.035em;margin:10px 0 13px}.hero p{color:#526259;max-width:680px;margin:0}.hero-note{background:#fff;border:1px solid #dcece2;border-radius:20px;padding:20px;box-shadow:var(--shadow)}.hero-note strong{display:block;margin-bottom:6px}.codes{display:flex;gap:8px;margin-top:12px}.code-chip{font-weight:900;border-radius:9px;padding:7px 13px}.code-q{background:var(--green2);color:var(--green)}.code-v{background:var(--red2);color:var(--red)}.main{padding:28px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}.stat{background:white;border:1px solid var(--line);border-radius:15px;padding:15px}.stat strong{display:block;font-size:23px;line-height:1.3}.stat span{font-size:12px;color:var(--muted)}.filters{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:22px;box-shadow:var(--shadow)}.filter-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.filter-head h2{font-size:18px;margin:0}.filter-grid{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:12px}.field label{display:block;font-size:12px;font-weight:800;color:#526259;margin-bottom:6px}.field input,.field select{width:100%;border:1px solid #d8e2dc;background:#fff;border-radius:11px;padding:11px 12px;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:var(--red);box-shadow:0 0 0 3px #c6282819}.actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;flex-wrap:wrap}.hint{font-size:12px;color:var(--muted)}.btn{border:0;border-radius:10px;padding:10px 14px;font-weight:800}.btn-primary{background:var(--red);color:white}.btn-ghost{background:#f0f4f1;color:#3f5147}.btn-red{background:var(--red);color:white}.result-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 14px}.result-head h2{margin:0;font-size:22px}.result-head p{margin:3px 0 0;color:var(--muted);font-size:13px}.task-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.task{background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px;display:flex;flex-direction:column;min-height:250px;box-shadow:var(--shadow);transition:transform .16s,border-color .16s}.task:hover{transform:translateY(-2px);border-color:#b6d7c3}.task-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.task-code{font-size:12px;font-weight:900;padding:5px 8px;border-radius:8px;background:var(--green2);color:var(--green)}.task-code.v{background:var(--red2);color:var(--red)}.level{font-size:11px;color:#526259;background:#f1f4f2;border-radius:99px;padding:5px 8px;font-weight:800}.task h3{font-size:17px;line-height:1.35;margin:15px 0 8px}.task p{font-size:13px;color:#43544a;margin:0 0 13px;line-height:1.4}.task p strong{color:#202b24}.detail-block li strong{color:#1b6843}.detail-block li{line-height:1.4}.detail-block ul{padding-left:17px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}.tag{font-size:11px;padding:4px 7px;border:1px solid var(--line);border-radius:7px;color:#506157}.task-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid #edf1ee}.evidence-mini{font-size:11px;color:var(--muted);max-width:65%}.empty{background:white;border:1px dashed #c9d8ce;border-radius:16px;text-align:center;padding:38px;color:var(--muted);grid-column:1/-1}.rules{margin:22px 0 26px;display:grid;grid-template-columns:1fr 1fr;gap:15px}.rules-intro{background:linear-gradient(135deg,#fff0ef,#fff8d8);border:2px solid var(--red);border-radius:20px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}.rules-intro h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px);color:var(--red)}.rules-intro>p{margin:0 0 15px;color:#4f5550}.rule{border-top:4px solid var(--green)}.rule:nth-child(even){border-top-color:var(--red)}.rule:nth-child(3){border-top-color:#e3b900}.rule-gate{background:#fff;border:1px solid #e7dede;border-radius:14px;padding:14px;margin-top:16px}.rule-gate label{display:flex;align-items:flex-start;gap:10px;font-weight:750}.rule-gate input{width:20px;height:20px;accent-color:var(--green);flex-shrink:0;margin-top:2px}.rule-gate .btn{margin-top:12px}.portal-locked{display:none}.video-tag{display:inline-block;background:#fff0ef;color:var(--red);border:1px solid #ffd0cc;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:900;margin:4px 0 10px}.rule{background:#fff;border:1px solid var(--line);border-top:4px solid var(--green);border-radius:16px;padding:18px}.rule:nth-child(even){border-top-color:var(--red)}.rule:nth-child(3){border-top-color:#e3b900}.rule h3{margin:0 0 8px;font-size:16px}.rule p,.rule li{font-size:13px;color:#58685f}.rule ul{padding-left:19px;margin:8px 0 0}.footer{padding:25px 0;border-top:1px solid var(--line);background:white;color:var(--muted);font-size:12px}.modal-back{position:fixed;inset:0;background:#0e2119a6;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal-back.open{display:flex}.modal{width:min(800px,100%);max-height:90vh;overflow:auto;background:white;border-radius:20px;padding:24px;box-shadow:0 30px 90px #0004}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:start}.modal h2{margin:8px 0 10px;line-height:1.25}.close{border:0;background:#f1f4f2;border-radius:10px;width:38px;height:38px;font-size:22px}.modal-desc{color:#56665d}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}.detail-block{background:#f7faf8;border:1px solid var(--line);border-radius:13px;padding:14px}.detail-block h3{font-size:14px;margin:0 0 8px}.detail-block ul{padding-left:19px;margin:0}.detail-block li{margin:5px 0;font-size:13px}.detail-block.full{grid-column:1/-1}.modal-actions{display:flex;gap:9px;flex-wrap:wrap}.notice{background:var(--yellow);border:1px solid #efd45b;color:var(--yellow-ink);padding:12px;border-radius:12px;font-size:12px;margin:15px 0}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#17231e;color:#fff;padding:10px 16px;border-radius:10px;display:none;z-index:20;font-size:13px}.toast.show{display:block}@media(max-width:900px){.filter-grid{grid-template-columns:repeat(3,1fr)}.filter-grid .field:first-child{grid-column:span 3}.task-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:1fr}.hero-note{max-width:none}}@media(max-width:600px){.wrap{padding:0 14px}.topinner{align-items:flex-start}.topinner .pill{display:none}.stats{grid-template-columns:repeat(2,1fr)}.filter-grid{grid-template-columns:1fr 1fr}.filter-grid .field:first-child{grid-column:span 2}.task-grid{grid-template-columns:1fr}.rules{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.detail-block.full{grid-column:auto}.result-head{align-items:start;flex-direction:column}.hero{padding:25px 0}.hero-note{padding:15px}.modal{padding:18px}}
+</style></head>
+<body>
+<header class="topbar"><div class="wrap topinner"><div class="brand"><div class="logo">🍀</div><div>CLB HỌC TẬP 5H SÁNG<small>Trung tâm tra cứu nhiệm vụ hỗ trợ</small></div></div><div class="pill">Bản tra cứu nhiệm vụ</div></div></header>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Học tập · Kỷ luật · Chia sẻ</div><h1>Mỗi nhiệm vụ là một<br>đóng góp có giá trị.</h1><p>Chọn nhiệm vụ BQL đã duyệt. Xem nhanh <strong>khối lượng, sản phẩm và minh chứng</strong> trước khi bắt đầu.</p></div><aside class="hero-note"><strong>🔎 Cách dùng nhanh</strong><p><b>1.</b> Chọn loại hỗ trợ.<br><b>2.</b> Lọc nhiệm vụ.<br><b>3.</b> Xem yêu cầu và minh chứng.<br><b>4.</b> Gửi mã cho BQL duyệt.</p><div class="codes"><span class="code-chip code-q">Q = Xét hỗ trợ quỹ tháng</span><span class="code-chip code-v">V = Xét trường hợp vắng không phép</span></div></aside></div></section>
+<main class="wrap main"><section class="rules-intro" aria-labelledby="rulesTitle">
+<h2 id="rulesTitle">📌 QUY ĐỊNH TRƯỚC KHI CHỌN NHIỆM VỤ</h2>
+<p>Chỉ cần nhớ <strong>4 nguyên tắc</strong> sau:</p>
+<div class="rules">
+<article class="rule"><h3>📹 1. Sản phẩm và minh chứng</h3><ul>
+<li>Nhiệm vụ chia sẻ/hướng dẫn: ưu tiên <strong>video quay sẵn</strong>; không cần tham gia cùng giờ.</li>
+<li>Nộp <strong>sản phẩm + minh chứng quá trình</strong> (video, ảnh từng bước, bản nháp hoặc file gốc). <strong>Không bắt buộc lộ mặt</strong>; BQL có thể yêu cầu bổ sung nếu chưa rõ.</li>
+</ul></article>
+<article class="rule"><h3>🔎 2. Nguồn và tính trung thực</h3><ul>
+<li>Nếu tham khảo, ghi <strong>tên tài liệu/tác giả (nếu biết) và đường dẫn</strong>; nói rõ phần tham khảo và phần tự làm.</li>
+<li><strong>Không sao chép rồi nhận là của mình</strong>, không bịa nguồn. Chia sẻ công cụ/website cần có link và mô tả công dụng.</li>
+</ul></article>
+<article class="rule"><h3>🧭 3. Chọn và thực hiện</h3><ul>
+<li>Đọc kỹ <strong>yêu cầu, minh chứng và tiêu chí hoàn thành</strong>; chọn nhiệm vụ vừa sức.</li>
+<li><strong>Gửi mã cho BQL và chờ duyệt trước khi làm</strong>. Nộp đúng yêu cầu; bổ sung nếu BQL đề nghị.</li>
+</ul></article>
+<article class="rule"><h3>🛡️ 4. Công bằng và riêng tư</h3><ul>
+<li>Không đăng thông tin cá nhân nhạy cảm. Có thể dùng <strong>quay màn hình, quay tay làm hoặc slide thuyết minh</strong> nếu phù hợp.</li>
+<li><strong>Mã Q/V không quyết định kết quả hỗ trợ</strong>. BQL xét hoàn cảnh, quy định và sản phẩm; bạn có thể đề nghị đổi nhiệm vụ nếu chưa phù hợp.</li>
+</ul></article>
+</div>
+<p class="hint"><strong>Nhớ:</strong> Chỉ bắt đầu khi BQL xác nhận; hoàn thành nhiệm vụ <strong>không đồng nghĩa tự động được duyệt hỗ trợ</strong>.</p>
+<div class="rule-gate"><label><input type="checkbox" id="readRules"><span>Tôi đã đọc và hiểu các quy định chính về <strong>minh chứng, nguồn, trung thực và quy trình duyệt</strong>.</span></label><button class="btn btn-primary" id="unlockTasks" disabled>Mở danh sách nhiệm vụ</button><p class="hint" id="gateHint">Tích xác nhận để mở bộ lọc nhiệm vụ.</p></div>
+</section>
+<div id="taskPortal" class="portal-locked" aria-hidden="true"><section class="stats"><div class="stat"><strong id="totalCount">48</strong><span>Nhiệm vụ trong thư viện mẫu</span></div><div class="stat"><strong>05</strong><span>Nhóm nhiệm vụ A–E</span></div><div class="stat"><strong>03</strong><span>Mức độ nhiệm vụ đang dùng</span></div><div class="stat"><strong>Q / V</strong><span>Mã phân biệt loại hỗ trợ</span></div></section>
+<section class="filters"><div class="filter-head"><h2>🎛️ Bộ lọc nhiệm vụ</h2><span class="hint"><strong>Q:</strong> ít việc hơn. <strong>V:</strong> nhiều việc hơn, cần phân tích/đối chiếu và minh chứng. Chỉ làm sau khi BQL duyệt</span></div><p class="hint" style="margin:0 0 14px"><strong>Chưa chắc chọn gì?</strong> Bắt đầu ở Mức 1. Chọn nhiệm vụ vừa sức.</p><div class="filter-grid"><div class="field"><label for="search">Tìm theo tên hoặc mã</label><input id="search" type="search" placeholder="Ví dụ: Q01, sơ đồ tư duy, trì hoãn, website…"></div><div class="field"><label for="kind">Loại hỗ trợ</label><select id="kind"><option value="all">Tất cả (Q và V)</option><option value="Q">Q — Xét hỗ trợ quỹ tháng</option><option value="V">V — Trường hợp vắng không phép</option></select></div><div class="field"><label for="level">Mức nhiệm vụ</label><select id="level"><option value="all">Tất cả mức</option><option value="1">Mức 1 · Cơ bản</option><option value="2">Mức 2 · Có đầu tư</option><option value="3">Mức 3 · Nâng cao</option></select></div><div class="field"><label for="group">Nhóm nhiệm vụ</label><select id="group"><option value="all">Tất cả nhóm</option><option value="A">A · Bài học / giải bài</option><option value="B">B · Phương pháp học</option><option value="C">C · Kinh nghiệm</option><option value="D">D · Sáng tạo</option><option value="E">E · Tài nguyên hữu ích</option></select></div><div class="field"><label for="audience">Đối tượng</label><select id="audience"><option value="all">Tất cả đối tượng</option><option value="Học sinh">Học sinh</option><option value="Sinh viên">Sinh viên</option><option value="Người đi làm">Người đi làm</option><option value="Mọi đối tượng">Mọi đối tượng</option></select></div></div><div class="actions"><span class="hint" id="filterSummary" aria-live="polite">Đang hiển thị tất cả nhiệm vụ</span><button class="btn btn-ghost" id="reset">Xóa bộ lọc</button></div></section>
+<div class="result-head"><div><h2>Danh sách nhiệm vụ</h2><p>Mở từng nhiệm vụ để xem yêu cầu và bằng chứng bắt buộc.</p></div><span class="pill" id="resultCount">48 nhiệm vụ</span></div><section class="task-grid" id="taskGrid" aria-live="polite"></section>
+</div></main>
+<footer class="footer"><div class="wrap">🍀 CLB Học tập 5H Sáng · Thư viện gồm 48 mã tra cứu (24 chủ đề × 2 ngữ cảnh Q/V), với 3 mức độ nhiệm vụ. Quy định được đặt trước danh sách; nhiệm vụ chia sẻ ưu tiên video quay sẵn để xem linh hoạt. Mã Q = nhiệm vụ tham khảo trong quy trình xét hỗ trợ quỹ tháng; mã V = nhiệm vụ có thể được cân nhắc trong trường hợp vắng không phép. Mã và danh mục có thể được BQL cập nhật.</div></footer>
+<div class="modal-back" id="modalBack" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><div><div class="task-top"><span id="modalCode" class="task-code">Q01</span><span id="modalLevel" class="level">Mức 1</span></div><h2 id="modalTitle"></h2></div><button class="close" id="closeModal" aria-label="Đóng">×</button></div><p class="modal-desc" id="modalPurpose"></p><div class="tags" id="modalTags"></div><div class="detail-grid" id="modalDetails"></div><div class="notice"><strong>Lưu ý:</strong> Mã nhiệm vụ không phải quyết định hỗ trợ. Nộp <strong>sản phẩm + minh chứng quá trình + nguồn</strong>. Chờ BQL xác nhận trước khi làm.</div><div class="modal-actions"><button class="btn btn-primary" id="copyCode">Sao chép mã nhiệm vụ</button><button class="btn btn-ghost" id="closeModal2">Đóng chi tiết</button></div></div></div><div class="toast" id="toast" role="status"></div>
+<script>
+const tasks = [
+ {
+  "code": "Q01",
+  "kind": "Q",
+  "level": 1,
+  "group": "A",
+  "audience": [
+   "Học sinh",
+   "Sinh viên"
+  ],
+  "title": "Giải 3–5 câu bài tập theo môn học",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Giải 3–5 câu bài tập theo môn học. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn một môn và một chủ đề cụ thể; hoàn thành 3–5 câu phù hợp trình độ.",
+   "Tự làm, ghi các bước chính; câu chưa biết phải đánh dấu chỗ vướng thay vì chép đáp án.",
+   "Đối chiếu lại đáp án sau khi làm và sửa bằng màu khác nếu phát hiện sai."
+  ],
+  "evidence": [
+   "Ảnh hoặc tệp có đủ 3–5 câu đã làm, nhìn rõ các bước.",
+   "Ảnh đề hoặc tên tài liệu/trang web và đường dẫn nguồn.",
+   "1 ảnh tiến trình hoặc bản nháp để đối chiếu."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 3–5 câu trong phạm vi đã thống nhất.",
+   "Có cách làm rõ ràng, ghi nguồn và không sao chép nguyên bài.",
+   "Có dấu hiệu tự làm và thành viên hiểu bài đã nộp."
+  ]
+ },
+ {
+  "code": "V01",
+  "kind": "V",
+  "level": 3,
+  "group": "A",
+  "audience": [
+   "Học sinh",
+   "Sinh viên"
+  ],
+  "title": "Giải 8–12 câu cùng chủ đề và tự kiểm tra lời giải",
+  "duration": "75–120 phút",
+  "purpose": "**Bản mở rộng:** Giải 8–12 câu cùng chủ đề và tự kiểm tra lời giải. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn một chủ đề thống nhất và tự giải 8–12 câu, trong đó có ít nhất 2 câu vận dụng nếu trình độ phù hợp.",
+   "Trình bày đầy đủ dữ kiện, phương pháp và các bước giải; không chỉ ghi đáp số.",
+   "Tự kiểm tra lại toàn bộ kết quả; chọn ít nhất 2 lỗi dễ mắc, giải thích cách phát hiện và sửa.",
+   "Nếu tham khảo lời giải, ghi rõ phần đã tham khảo và viết lại bằng cách hiểu của mình."
+  ],
+  "evidence": [
+   "Tệp/ảnh đầy đủ 8–12 câu đã giải và phần tự kiểm tra.",
+   "Ảnh đề và nguồn cụ thể.",
+   "2–3 ảnh tiến trình/bản nháp hoặc video quay màn hình."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 8–12 câu, có trình bày các bước và phần kiểm tra lại.",
+   "Phân tích được ít nhất 2 lỗi dễ mắc cùng cách sửa.",
+   "Minh chứng quá trình phù hợp với sản phẩm; nguồn được ghi rõ."
+  ]
+ },
+ {
+  "code": "Q02",
+  "kind": "Q",
+  "level": 1,
+  "group": "A",
+  "audience": [
+   "Học sinh",
+   "Sinh viên"
+  ],
+  "title": "Giải 3–5 câu bài tập theo môn học",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Giải 3–5 câu bài tập theo môn học. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn một môn và một chủ đề cụ thể; hoàn thành 3–5 câu phù hợp trình độ.",
+   "Tự làm, ghi các bước chính; câu chưa biết phải đánh dấu chỗ vướng thay vì chép đáp án.",
+   "Đối chiếu lại đáp án sau khi làm và sửa bằng màu khác nếu phát hiện sai."
+  ],
+  "evidence": [
+   "Ảnh hoặc tệp có đủ 3–5 câu đã làm, nhìn rõ các bước.",
+   "Ảnh đề hoặc tên tài liệu/trang web và đường dẫn nguồn.",
+   "1 ảnh tiến trình hoặc bản nháp để đối chiếu."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 3–5 câu trong phạm vi đã thống nhất.",
+   "Có cách làm rõ ràng, ghi nguồn và không sao chép nguyên bài.",
+   "Có dấu hiệu tự làm và thành viên hiểu bài đã nộp."
+  ]
+ },
+ {
+  "code": "V02",
+  "kind": "V",
+  "level": 3,
+  "group": "A",
+  "audience": [
+   "Học sinh",
+   "Sinh viên"
+  ],
+  "title": "Giải 8–12 câu cùng chủ đề và tự kiểm tra lời giải",
+  "duration": "75–120 phút",
+  "purpose": "**Bản mở rộng:** Giải 8–12 câu cùng chủ đề và tự kiểm tra lời giải. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn một chủ đề thống nhất và tự giải 8–12 câu, trong đó có ít nhất 2 câu vận dụng nếu trình độ phù hợp.",
+   "Trình bày đầy đủ dữ kiện, phương pháp và các bước giải; không chỉ ghi đáp số.",
+   "Tự kiểm tra lại toàn bộ kết quả; chọn ít nhất 2 lỗi dễ mắc, giải thích cách phát hiện và sửa.",
+   "Nếu tham khảo lời giải, ghi rõ phần đã tham khảo và viết lại bằng cách hiểu của mình."
+  ],
+  "evidence": [
+   "Tệp/ảnh đầy đủ 8–12 câu đã giải và phần tự kiểm tra.",
+   "Ảnh đề và nguồn cụ thể.",
+   "2–3 ảnh tiến trình/bản nháp hoặc video quay màn hình."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 8–12 câu, có trình bày các bước và phần kiểm tra lại.",
+   "Phân tích được ít nhất 2 lỗi dễ mắc cùng cách sửa.",
+   "Minh chứng quá trình phù hợp với sản phẩm; nguồn được ghi rõ."
+  ]
+ },
+ {
+  "code": "Q03",
+  "kind": "Q",
+  "level": 1,
+  "group": "A",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Viết lời giải chi tiết cho 1 bài tập",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Viết lời giải chi tiết cho 1 bài tập. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn 1 bài phù hợp trình độ.",
+   "Nêu dữ kiện, điều cần tìm, phương pháp chọn và từng bước giải.",
+   "Kết thúc bằng đáp số và một lưu ý về lỗi dễ mắc."
+  ],
+  "evidence": [
+   "Ảnh/tệp lời giải hoàn chỉnh và ảnh đề.",
+   "Ảnh bản nháp hoặc quá trình viết lời giải.",
+   "Ghi nguồn bài và nguồn tham khảo nếu có."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Một bài được giải đủ bước, dễ theo dõi.",
+   "Có đáp số, nguồn và dấu hiệu tự thực hiện."
+  ]
+ },
+ {
+  "code": "V03",
+  "kind": "V",
+  "level": 2,
+  "group": "A",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Viết lời giải chi tiết cho 3 bài cùng dạng",
+  "duration": "75–105 phút",
+  "purpose": "**Bản mở rộng:** Viết lời giải chi tiết cho 3 bài cùng dạng. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn 3 bài cùng dạng nhưng tăng dần độ khó.",
+   "Viết lời giải từng bước cho cả 3 bài; giải thích vì sao chọn phương pháp đó.",
+   "So sánh điểm giống/khác giữa các bài và nêu lỗi thường gặp ở ít nhất 2 bài."
+  ],
+  "evidence": [
+   "Một tài liệu có 3 lời giải chi tiết, phần so sánh và lỗi thường gặp.",
+   "Ảnh đề/đường dẫn nguồn cho cả 3 bài.",
+   "2–3 ảnh tiến trình hoặc video quay màn hình khi trình bày lời giải."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 3 bài cùng dạng với lời giải độc lập.",
+   "Có so sánh phương pháp và phân tích ít nhất 2 lỗi.",
+   "Minh chứng cho thấy sản phẩm được tự thực hiện."
+  ]
+ },
+ {
+  "code": "Q04",
+  "kind": "Q",
+  "level": 1,
+  "group": "A",
+  "audience": [
+   "Học sinh",
+   "Sinh viên"
+  ],
+  "title": "Viết lời giải chi tiết cho 1 bài tập",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Viết lời giải chi tiết cho 1 bài tập. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn 1 bài phù hợp trình độ.",
+   "Nêu dữ kiện, điều cần tìm, phương pháp chọn và từng bước giải.",
+   "Kết thúc bằng đáp số và một lưu ý về lỗi dễ mắc."
+  ],
+  "evidence": [
+   "Ảnh/tệp lời giải hoàn chỉnh và ảnh đề.",
+   "Ảnh bản nháp hoặc quá trình viết lời giải.",
+   "Ghi nguồn bài và nguồn tham khảo nếu có."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Một bài được giải đủ bước, dễ theo dõi.",
+   "Có đáp số, nguồn và dấu hiệu tự thực hiện."
+  ]
+ },
+ {
+  "code": "V04",
+  "kind": "V",
+  "level": 2,
+  "group": "A",
+  "audience": [
+   "Học sinh",
+   "Sinh viên"
+  ],
+  "title": "Viết lời giải chi tiết cho 3 bài cùng dạng",
+  "duration": "75–105 phút",
+  "purpose": "**Bản mở rộng:** Viết lời giải chi tiết cho 3 bài cùng dạng. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn 3 bài cùng dạng nhưng tăng dần độ khó.",
+   "Viết lời giải từng bước cho cả 3 bài; giải thích vì sao chọn phương pháp đó.",
+   "So sánh điểm giống/khác giữa các bài và nêu lỗi thường gặp ở ít nhất 2 bài."
+  ],
+  "evidence": [
+   "Một tài liệu có 3 lời giải chi tiết, phần so sánh và lỗi thường gặp.",
+   "Ảnh đề/đường dẫn nguồn cho cả 3 bài.",
+   "2–3 ảnh tiến trình hoặc video quay màn hình khi trình bày lời giải."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 3 bài cùng dạng với lời giải độc lập.",
+   "Có so sánh phương pháp và phân tích ít nhất 2 lỗi.",
+   "Minh chứng cho thấy sản phẩm được tự thực hiện."
+  ]
+ },
+ {
+  "code": "Q05",
+  "kind": "Q",
+  "level": 1,
+  "group": "B",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Giải thích 1 khái niệm cơ bản cho người mới",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Giải thích 1 khái niệm cơ bản cho người mới. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn 1 khái niệm nhỏ trong môn học.",
+   "Giải thích bằng lời của mình trong khoảng 150–250 từ hoặc 3–5 slide.",
+   "Đưa 1 ví dụ minh họa đơn giản."
+  ],
+  "evidence": [
+   "Tệp/bài viết/slide hoàn chỉnh.",
+   "Ảnh chụp bản nháp hoặc video ngắn tự trình bày (30–60 giây).",
+   "Ghi nguồn nếu có dùng tài liệu ngoài."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Giải thích đúng, dễ hiểu và có ví dụ.",
+   "Có minh chứng tự thực hiện, không sao chép nguyên văn."
+  ]
+ },
+ {
+  "code": "V05",
+  "kind": "V",
+  "level": 2,
+  "group": "B",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Dạy lại 1 chủ đề kèm ví dụ và câu tự luyện",
+  "duration": "60–90 phút",
+  "purpose": "**Bản mở rộng:** Dạy lại 1 chủ đề kèm ví dụ và câu tự luyện. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn một chủ đề gồm 2–3 ý liên quan.",
+   "Viết hướng dẫn khoảng 400–700 từ hoặc 6–8 slide, giải thích thuật ngữ và các bước theo thứ tự.",
+   "Đưa ít nhất 2 ví dụ có giải thích và 3 câu tự luyện kèm đáp án.",
+   "Nêu một hiểu lầm phổ biến và cách tránh."
+  ],
+  "evidence": [
+   "Tài liệu 400–700 từ hoặc 6–8 slide kèm ví dụ và câu tự luyện.",
+   "2–3 ảnh tiến trình hoặc video 1–2 phút tự trình bày nội dung.",
+   "Danh sách nguồn tham khảo."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Bao quát đủ 2–3 ý liên quan, ít nhất 2 ví dụ và 3 câu tự luyện có đáp án.",
+   "Có giải thích hiểu lầm phổ biến, nguồn rõ ràng và minh chứng quá trình."
+  ]
+ },
+ {
+  "code": "Q06",
+  "kind": "Q",
+  "level": 1,
+  "group": "B",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Người đi làm"
+  ],
+  "title": "Giải thích 1 khái niệm cơ bản cho người mới",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Giải thích 1 khái niệm cơ bản cho người mới. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn 1 khái niệm nhỏ trong môn học.",
+   "Giải thích bằng lời của mình trong khoảng 150–250 từ hoặc 3–5 slide.",
+   "Đưa 1 ví dụ minh họa đơn giản."
+  ],
+  "evidence": [
+   "Tệp/bài viết/slide hoàn chỉnh.",
+   "Ảnh chụp bản nháp hoặc video ngắn tự trình bày (30–60 giây).",
+   "Ghi nguồn nếu có dùng tài liệu ngoài."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Giải thích đúng, dễ hiểu và có ví dụ.",
+   "Có minh chứng tự thực hiện, không sao chép nguyên văn."
+  ]
+ },
+ {
+  "code": "V06",
+  "kind": "V",
+  "level": 2,
+  "group": "B",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Người đi làm"
+  ],
+  "title": "Dạy lại 1 chủ đề kèm ví dụ và câu tự luyện",
+  "duration": "60–90 phút",
+  "purpose": "**Bản mở rộng:** Dạy lại 1 chủ đề kèm ví dụ và câu tự luyện. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn một chủ đề gồm 2–3 ý liên quan.",
+   "Viết hướng dẫn khoảng 400–700 từ hoặc 6–8 slide, giải thích thuật ngữ và các bước theo thứ tự.",
+   "Đưa ít nhất 2 ví dụ có giải thích và 3 câu tự luyện kèm đáp án.",
+   "Nêu một hiểu lầm phổ biến và cách tránh."
+  ],
+  "evidence": [
+   "Tài liệu 400–700 từ hoặc 6–8 slide kèm ví dụ và câu tự luyện.",
+   "2–3 ảnh tiến trình hoặc video 1–2 phút tự trình bày nội dung.",
+   "Danh sách nguồn tham khảo."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Bao quát đủ 2–3 ý liên quan, ít nhất 2 ví dụ và 3 câu tự luyện có đáp án.",
+   "Có giải thích hiểu lầm phổ biến, nguồn rõ ràng và minh chứng quá trình."
+  ]
+ },
+ {
+  "code": "Q07",
+  "kind": "Q",
+  "level": 2,
+  "group": "B",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Hướng dẫn bắt đầu 1 dạng bài qua 2 ví dụ",
+  "duration": "45–60 phút",
+  "purpose": "**Phạm vi nhỏ:** Hướng dẫn bắt đầu 1 dạng bài qua 2 ví dụ. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn 1 dạng bài cụ thể và nêu dấu hiệu nhận biết.",
+   "Viết 3–5 bước bắt đầu giải và minh họa bằng 2 ví dụ cơ bản.",
+   "Nêu một lỗi dễ mắc."
+  ],
+  "evidence": [
+   "Tài liệu 1–2 trang hoặc 3–5 slide.",
+   "Ảnh đề hai ví dụ và nguồn.",
+   "Ảnh bản nháp hoặc video giải thích 30–60 giây."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có dấu hiệu nhận biết, các bước bắt đầu và 2 ví dụ đúng.",
+   "Người mới có thể làm theo."
+  ]
+ },
+ {
+  "code": "V07",
+  "kind": "V",
+  "level": 3,
+  "group": "B",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Xây dựng hướng dẫn dạng bài qua 5 ví dụ tăng dần",
+  "duration": "90–120 phút",
+  "purpose": "**Bản mở rộng:** Xây dựng hướng dẫn dạng bài qua 5 ví dụ tăng dần. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn một dạng bài và xây dựng quy trình nhận diện–giải–kiểm tra.",
+   "Minh họa bằng 5 ví dụ từ dễ đến khó, ghi rõ vì sao chọn cách làm.",
+   "Thêm bảng “khi nào dùng cách nào”, ít nhất 3 lỗi thường gặp và cách sửa."
+  ],
+  "evidence": [
+   "Tài liệu hướng dẫn hoàn chỉnh gồm quy trình, 5 ví dụ, bảng lựa chọn phương pháp và lỗi thường gặp.",
+   "Ảnh/đường dẫn nguồn các ví dụ.",
+   "2–3 ảnh tiến trình hoặc video quay màn hình 1–2 phút."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 5 ví dụ tăng dần và giải thích được lựa chọn phương pháp.",
+   "Có bảng lựa chọn và ít nhất 3 lỗi kèm cách sửa."
+  ]
+ },
+ {
+  "code": "Q08",
+  "kind": "Q",
+  "level": 2,
+  "group": "B",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Hướng dẫn bắt đầu 1 dạng bài qua 2 ví dụ",
+  "duration": "45–60 phút",
+  "purpose": "**Phạm vi nhỏ:** Hướng dẫn bắt đầu 1 dạng bài qua 2 ví dụ. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn 1 dạng bài cụ thể và nêu dấu hiệu nhận biết.",
+   "Viết 3–5 bước bắt đầu giải và minh họa bằng 2 ví dụ cơ bản.",
+   "Nêu một lỗi dễ mắc."
+  ],
+  "evidence": [
+   "Tài liệu 1–2 trang hoặc 3–5 slide.",
+   "Ảnh đề hai ví dụ và nguồn.",
+   "Ảnh bản nháp hoặc video giải thích 30–60 giây."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có dấu hiệu nhận biết, các bước bắt đầu và 2 ví dụ đúng.",
+   "Người mới có thể làm theo."
+  ]
+ },
+ {
+  "code": "V08",
+  "kind": "V",
+  "level": 3,
+  "group": "B",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Xây dựng hướng dẫn dạng bài qua 5 ví dụ tăng dần",
+  "duration": "90–120 phút",
+  "purpose": "**Bản mở rộng:** Xây dựng hướng dẫn dạng bài qua 5 ví dụ tăng dần. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn một dạng bài và xây dựng quy trình nhận diện–giải–kiểm tra.",
+   "Minh họa bằng 5 ví dụ từ dễ đến khó, ghi rõ vì sao chọn cách làm.",
+   "Thêm bảng “khi nào dùng cách nào”, ít nhất 3 lỗi thường gặp và cách sửa."
+  ],
+  "evidence": [
+   "Tài liệu hướng dẫn hoàn chỉnh gồm quy trình, 5 ví dụ, bảng lựa chọn phương pháp và lỗi thường gặp.",
+   "Ảnh/đường dẫn nguồn các ví dụ.",
+   "2–3 ảnh tiến trình hoặc video quay màn hình 1–2 phút."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 5 ví dụ tăng dần và giải thích được lựa chọn phương pháp.",
+   "Có bảng lựa chọn và ít nhất 3 lỗi kèm cách sửa."
+  ]
+ },
+ {
+  "code": "Q09",
+  "kind": "Q",
+  "level": 1,
+  "group": "C",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Chia sẻ 1 phương pháp học đã thử",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Chia sẻ 1 phương pháp học đã thử. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn một phương pháp đã từng thử.",
+   "Mô tả 3 bước áp dụng, thời điểm phù hợp và một ưu/nhược điểm.",
+   "Nêu ví dụ thực tế ngắn; không khẳng định hiệu quả giống nhau với mọi người."
+  ],
+  "evidence": [
+   "Bài viết 250–400 từ hoặc 3–5 slide.",
+   "Ảnh ghi chú/kế hoạch đã dùng; có thể che thông tin cá nhân.",
+   "Nguồn tham khảo nếu có."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Nêu rõ các bước và ví dụ thực tế.",
+   "Phân biệt trải nghiệm cá nhân với thông tin tham khảo."
+  ]
+ },
+ {
+  "code": "V09",
+  "kind": "V",
+  "level": 2,
+  "group": "C",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Thử nghiệm và đánh giá 2 phương pháp học",
+  "duration": "75–105 phút",
+  "purpose": "**Bản mở rộng:** Thử nghiệm và đánh giá 2 phương pháp học. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn 2 phương pháp phù hợp cùng một mục tiêu học.",
+   "Lập tiêu chí so sánh (ít nhất 3 tiêu chí) và thử mỗi phương pháp trong một phiên học ngắn nếu điều kiện cho phép.",
+   "Ghi kết quả quan sát, điểm mạnh/yếu và trường hợp nên dùng từng phương pháp."
+  ],
+  "evidence": [
+   "Bảng so sánh 2 phương pháp theo ít nhất 3 tiêu chí và phần kết luận.",
+   "Ảnh ghi chép/kết quả thử hoặc video ngắn giải thích cách thử.",
+   "Nguồn cho thông tin tham khảo."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "So sánh đủ 2 phương pháp theo 3 tiêu chí trở lên.",
+   "Kết luận có căn cứ từ ghi chép/thử nghiệm, không phóng đại kết quả."
+  ]
+ },
+ {
+  "code": "Q10",
+  "kind": "Q",
+  "level": 1,
+  "group": "C",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Chia sẻ 1 phương pháp học đã thử",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Chia sẻ 1 phương pháp học đã thử. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn một phương pháp đã từng thử.",
+   "Mô tả 3 bước áp dụng, thời điểm phù hợp và một ưu/nhược điểm.",
+   "Nêu ví dụ thực tế ngắn; không khẳng định hiệu quả giống nhau với mọi người."
+  ],
+  "evidence": [
+   "Bài viết 250–400 từ hoặc 3–5 slide.",
+   "Ảnh ghi chú/kế hoạch đã dùng; có thể che thông tin cá nhân.",
+   "Nguồn tham khảo nếu có."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Nêu rõ các bước và ví dụ thực tế.",
+   "Phân biệt trải nghiệm cá nhân với thông tin tham khảo."
+  ]
+ },
+ {
+  "code": "V10",
+  "kind": "V",
+  "level": 2,
+  "group": "C",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Thử nghiệm và đánh giá 2 phương pháp học",
+  "duration": "75–105 phút",
+  "purpose": "**Bản mở rộng:** Thử nghiệm và đánh giá 2 phương pháp học. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Chọn 2 phương pháp phù hợp cùng một mục tiêu học.",
+   "Lập tiêu chí so sánh (ít nhất 3 tiêu chí) và thử mỗi phương pháp trong một phiên học ngắn nếu điều kiện cho phép.",
+   "Ghi kết quả quan sát, điểm mạnh/yếu và trường hợp nên dùng từng phương pháp."
+  ],
+  "evidence": [
+   "Bảng so sánh 2 phương pháp theo ít nhất 3 tiêu chí và phần kết luận.",
+   "Ảnh ghi chép/kết quả thử hoặc video ngắn giải thích cách thử.",
+   "Nguồn cho thông tin tham khảo."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "So sánh đủ 2 phương pháp theo 3 tiêu chí trở lên.",
+   "Kết luận có căn cứ từ ghi chép/thử nghiệm, không phóng đại kết quả."
+  ]
+ },
+ {
+  "code": "Q11",
+  "kind": "Q",
+  "level": 1,
+  "group": "C",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Lập kế hoạch học tập mẫu cho 3 ngày",
+  "duration": "20–35 phút",
+  "purpose": "**Phạm vi nhỏ:** Lập kế hoạch học tập mẫu cho 3 ngày. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Lập lịch cho 3 ngày với 1–3 phiên học/ngày.",
+   "Mỗi phiên có môn/chủ đề, thời lượng và mục tiêu cụ thể.",
+   "Chừa thời gian nghỉ và ghi một ưu tiên quan trọng mỗi ngày."
+  ],
+  "evidence": [
+   "Ảnh/tệp kế hoạch 3 ngày.",
+   "Ảnh bản nháp hoặc màn hình tạo kế hoạch."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 3 ngày, mục tiêu cụ thể và thời gian nghỉ hợp lý."
+  ]
+ },
+ {
+  "code": "V11",
+  "kind": "V",
+  "level": 2,
+  "group": "C",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Lập kế hoạch học tập 7 ngày kèm phương án dự phòng",
+  "duration": "60–90 phút",
+  "purpose": "**Bản mở rộng:** Lập kế hoạch học tập 7 ngày kèm phương án dự phòng. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Lập lịch đủ 7 ngày, có mục tiêu và ưu tiên theo từng ngày.",
+   "Chia nhiệm vụ lớn thành bước nhỏ, ước lượng thời lượng và bố trí thời gian nghỉ.",
+   "Thêm phương án dự phòng khi lỡ một phiên và bảng tự đánh giá cuối tuần."
+  ],
+  "evidence": [
+   "Kế hoạch 7 ngày kèm phương án dự phòng và bảng tự đánh giá.",
+   "Ảnh tiến trình tạo kế hoạch và một bản đánh dấu phiên học đã thử nếu có."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 7 ngày, có thứ tự ưu tiên, phương án dự phòng và cách tự đánh giá.",
+   "Kế hoạch thực tế, không yêu cầu thành viên công khai lịch riêng tư."
+  ]
+ },
+ {
+  "code": "Q12",
+  "kind": "Q",
+  "level": 1,
+  "group": "C",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Lập kế hoạch học tập mẫu cho 3 ngày",
+  "duration": "20–35 phút",
+  "purpose": "**Phạm vi nhỏ:** Lập kế hoạch học tập mẫu cho 3 ngày. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Lập lịch cho 3 ngày với 1–3 phiên học/ngày.",
+   "Mỗi phiên có môn/chủ đề, thời lượng và mục tiêu cụ thể.",
+   "Chừa thời gian nghỉ và ghi một ưu tiên quan trọng mỗi ngày."
+  ],
+  "evidence": [
+   "Ảnh/tệp kế hoạch 3 ngày.",
+   "Ảnh bản nháp hoặc màn hình tạo kế hoạch."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 3 ngày, mục tiêu cụ thể và thời gian nghỉ hợp lý."
+  ]
+ },
+ {
+  "code": "V12",
+  "kind": "V",
+  "level": 2,
+  "group": "C",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Lập kế hoạch học tập 7 ngày kèm phương án dự phòng",
+  "duration": "60–90 phút",
+  "purpose": "**Bản mở rộng:** Lập kế hoạch học tập 7 ngày kèm phương án dự phòng. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Lập lịch đủ 7 ngày, có mục tiêu và ưu tiên theo từng ngày.",
+   "Chia nhiệm vụ lớn thành bước nhỏ, ước lượng thời lượng và bố trí thời gian nghỉ.",
+   "Thêm phương án dự phòng khi lỡ một phiên và bảng tự đánh giá cuối tuần."
+  ],
+  "evidence": [
+   "Kế hoạch 7 ngày kèm phương án dự phòng và bảng tự đánh giá.",
+   "Ảnh tiến trình tạo kế hoạch và một bản đánh dấu phiên học đã thử nếu có."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ 7 ngày, có thứ tự ưu tiên, phương án dự phòng và cách tự đánh giá.",
+   "Kế hoạch thực tế, không yêu cầu thành viên công khai lịch riêng tư."
+  ]
+ },
+ {
+  "code": "Q13",
+  "kind": "Q",
+  "level": 1,
+  "group": "D",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Tạo checklist 5–8 mục trước buổi học",
+  "duration": "15–25 phút",
+  "purpose": "**Phạm vi nhỏ:** Tạo checklist 5–8 mục trước buổi học. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn một tình huống: trước buổi học, trước khi làm bài hoặc trước khi nộp bài.",
+   "Tạo checklist 5–8 mục, mỗi mục là hành động cụ thể có thể đánh dấu."
+  ],
+  "evidence": [
+   "Ảnh/tệp checklist hoàn chỉnh.",
+   "Ảnh chụp bản nháp hoặc checklist đã đánh dấu thử một lần."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có 5–8 hành động cụ thể, dễ sử dụng."
+  ]
+ },
+ {
+  "code": "V13",
+  "kind": "V",
+  "level": 2,
+  "group": "D",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Tạo checklist 12–15 mục và thử dùng trong 2 buổi",
+  "duration": "45–75 phút",
+  "purpose": "**Bản mở rộng:** Tạo checklist 12–15 mục và thử dùng trong 2 buổi. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Tạo checklist 12–15 mục, chia thành các nhóm rõ ràng.",
+   "Thử dùng checklist trong 2 buổi học hoặc 2 lần làm bài và ghi mục nào hữu ích/chưa phù hợp.",
+   "Chỉnh sửa bản cuối dựa trên kết quả thử."
+  ],
+  "evidence": [
+   "Bản checklist 12–15 mục, bản trước/sau chỉnh sửa và ghi chú sau 2 lần thử.",
+   "Ảnh tiến trình hoặc video quay màn hình ngắn."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có 12–15 mục chia nhóm, bằng chứng đã thử 2 lần và có điều chỉnh dựa trên trải nghiệm."
+  ]
+ },
+ {
+  "code": "Q14",
+  "kind": "Q",
+  "level": 1,
+  "group": "D",
+  "audience": [
+   "Học sinh",
+   "Sinh viên"
+  ],
+  "title": "Tạo checklist 5–8 mục trước buổi học",
+  "duration": "15–25 phút",
+  "purpose": "**Phạm vi nhỏ:** Tạo checklist 5–8 mục trước buổi học. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn một tình huống: trước buổi học, trước khi làm bài hoặc trước khi nộp bài.",
+   "Tạo checklist 5–8 mục, mỗi mục là hành động cụ thể có thể đánh dấu."
+  ],
+  "evidence": [
+   "Ảnh/tệp checklist hoàn chỉnh.",
+   "Ảnh chụp bản nháp hoặc checklist đã đánh dấu thử một lần."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có 5–8 hành động cụ thể, dễ sử dụng."
+  ]
+ },
+ {
+  "code": "V14",
+  "kind": "V",
+  "level": 2,
+  "group": "D",
+  "audience": [
+   "Học sinh",
+   "Sinh viên"
+  ],
+  "title": "Tạo checklist 12–15 mục và thử dùng trong 2 buổi",
+  "duration": "45–75 phút",
+  "purpose": "**Bản mở rộng:** Tạo checklist 12–15 mục và thử dùng trong 2 buổi. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Tạo checklist 12–15 mục, chia thành các nhóm rõ ràng.",
+   "Thử dùng checklist trong 2 buổi học hoặc 2 lần làm bài và ghi mục nào hữu ích/chưa phù hợp.",
+   "Chỉnh sửa bản cuối dựa trên kết quả thử."
+  ],
+  "evidence": [
+   "Bản checklist 12–15 mục, bản trước/sau chỉnh sửa và ghi chú sau 2 lần thử.",
+   "Ảnh tiến trình hoặc video quay màn hình ngắn."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có 12–15 mục chia nhóm, bằng chứng đã thử 2 lần và có điều chỉnh dựa trên trải nghiệm."
+  ]
+ },
+ {
+  "code": "Q15",
+  "kind": "Q",
+  "level": 1,
+  "group": "D",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Chia sẻ 3 cách giảm trì hoãn khi học",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Chia sẻ 3 cách giảm trì hoãn khi học. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Nêu 3 cách giảm trì hoãn, mỗi cách kèm một ví dụ áp dụng.",
+   "Nêu khi nào cách đó có thể không phù hợp."
+  ],
+  "evidence": [
+   "Bài viết 250–400 từ hoặc 3–5 slide.",
+   "Ảnh bản nháp hoặc video tự trình bày ngắn.",
+   "Nguồn nếu dùng thông tin bên ngoài."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có 3 cách cụ thể, ví dụ và giới hạn áp dụng."
+  ]
+ },
+ {
+  "code": "V15",
+  "kind": "V",
+  "level": 3,
+  "group": "D",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Phân tích nguyên nhân trì hoãn và lập kế hoạch thử 7 ngày",
+  "duration": "75–120 phút",
+  "purpose": "**Bản mở rộng:** Phân tích nguyên nhân trì hoãn và lập kế hoạch thử 7 ngày. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Phân tích một tình huống trì hoãn giả định hoặc trải nghiệm tự nguyện, không cần chia sẻ thông tin nhạy cảm.",
+   "Xác định ít nhất 2 nguyên nhân có thể có; đề xuất kế hoạch thử trong 7 ngày với bước nhỏ mỗi ngày.",
+   "Tạo bảng theo dõi ngắn và tổng kết điều chỉnh sau thử nghiệm."
+  ],
+  "evidence": [
+   "Phân tích tình huống, kế hoạch 7 ngày, bảng theo dõi và phần tổng kết.",
+   "Ảnh chụp bảng theo dõi đã ẩn thông tin riêng tư hoặc video trình bày 1–2 phút."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Phân tích nguyên nhân có lý do, kế hoạch 7 ngày khả thi và có tổng kết/điều chỉnh dựa trên ghi nhận."
+  ]
+ },
+ {
+  "code": "Q16",
+  "kind": "Q",
+  "level": 1,
+  "group": "D",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Chia sẻ 3 cách giảm trì hoãn khi học",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Chia sẻ 3 cách giảm trì hoãn khi học. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Nêu 3 cách giảm trì hoãn, mỗi cách kèm một ví dụ áp dụng.",
+   "Nêu khi nào cách đó có thể không phù hợp."
+  ],
+  "evidence": [
+   "Bài viết 250–400 từ hoặc 3–5 slide.",
+   "Ảnh bản nháp hoặc video tự trình bày ngắn.",
+   "Nguồn nếu dùng thông tin bên ngoài."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có 3 cách cụ thể, ví dụ và giới hạn áp dụng."
+  ]
+ },
+ {
+  "code": "V16",
+  "kind": "V",
+  "level": 3,
+  "group": "D",
+  "audience": [
+   "Mọi đối tượng"
+  ],
+  "title": "Phân tích nguyên nhân trì hoãn và lập kế hoạch thử 7 ngày",
+  "duration": "75–120 phút",
+  "purpose": "**Bản mở rộng:** Phân tích nguyên nhân trì hoãn và lập kế hoạch thử 7 ngày. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Phân tích một tình huống trì hoãn giả định hoặc trải nghiệm tự nguyện, không cần chia sẻ thông tin nhạy cảm.",
+   "Xác định ít nhất 2 nguyên nhân có thể có; đề xuất kế hoạch thử trong 7 ngày với bước nhỏ mỗi ngày.",
+   "Tạo bảng theo dõi ngắn và tổng kết điều chỉnh sau thử nghiệm."
+  ],
+  "evidence": [
+   "Phân tích tình huống, kế hoạch 7 ngày, bảng theo dõi và phần tổng kết.",
+   "Ảnh chụp bảng theo dõi đã ẩn thông tin riêng tư hoặc video trình bày 1–2 phút."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Phân tích nguyên nhân có lý do, kế hoạch 7 ngày khả thi và có tổng kết/điều chỉnh dựa trên ghi nhận."
+  ]
+ },
+ {
+  "code": "Q17",
+  "kind": "Q",
+  "level": 1,
+  "group": "E",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Viết bài chia sẻ kinh nghiệm học tập ngắn",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Viết bài chia sẻ kinh nghiệm học tập ngắn. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Viết 250–400 từ về một kinh nghiệm cụ thể.",
+   "Có bối cảnh, việc đã thử và một điều rút ra."
+  ],
+  "evidence": [
+   "Tệp/bài viết hoàn chỉnh và ảnh bản nháp hoặc lịch sử chỉnh sửa."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Bài có trải nghiệm/ ví dụ cụ thể và bài học rút ra."
+  ]
+ },
+ {
+  "code": "V17",
+  "kind": "V",
+  "level": 2,
+  "group": "E",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Viết bài kinh nghiệm học tập có ví dụ và hướng dẫn áp dụng",
+  "duration": "60–90 phút",
+  "purpose": "**Bản mở rộng:** Viết bài kinh nghiệm học tập có ví dụ và hướng dẫn áp dụng. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Viết 600–900 từ về một vấn đề học tập cụ thể.",
+   "Có bối cảnh, ít nhất 2 ví dụ, các bước áp dụng và điều kiện khi lời khuyên phù hợp/không phù hợp.",
+   "Rà soát bố cục, chính tả và nguồn tham khảo."
+  ],
+  "evidence": [
+   "Bài 600–900 từ, ảnh bản nháp/lịch sử chỉnh sửa và nguồn tham khảo nếu có.",
+   "Có thể nộp video 1 phút tóm tắt nội dung thay cho phần trình bày miệng nếu BQL yêu cầu."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ độ dài, có 2 ví dụ, hướng dẫn áp dụng và rà soát ngôn ngữ."
+  ]
+ },
+ {
+  "code": "Q18",
+  "kind": "Q",
+  "level": 1,
+  "group": "E",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Người đi làm",
+   "Mọi đối tượng"
+  ],
+  "title": "Viết bài chia sẻ kinh nghiệm học tập ngắn",
+  "duration": "30–45 phút",
+  "purpose": "**Phạm vi nhỏ:** Viết bài chia sẻ kinh nghiệm học tập ngắn. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Viết 250–400 từ về một kinh nghiệm cụ thể.",
+   "Có bối cảnh, việc đã thử và một điều rút ra."
+  ],
+  "evidence": [
+   "Tệp/bài viết hoàn chỉnh và ảnh bản nháp hoặc lịch sử chỉnh sửa."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Bài có trải nghiệm/ ví dụ cụ thể và bài học rút ra."
+  ]
+ },
+ {
+  "code": "V18",
+  "kind": "V",
+  "level": 2,
+  "group": "E",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Người đi làm",
+   "Mọi đối tượng"
+  ],
+  "title": "Viết bài kinh nghiệm học tập có ví dụ và hướng dẫn áp dụng",
+  "duration": "60–90 phút",
+  "purpose": "**Bản mở rộng:** Viết bài kinh nghiệm học tập có ví dụ và hướng dẫn áp dụng. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Viết 600–900 từ về một vấn đề học tập cụ thể.",
+   "Có bối cảnh, ít nhất 2 ví dụ, các bước áp dụng và điều kiện khi lời khuyên phù hợp/không phù hợp.",
+   "Rà soát bố cục, chính tả và nguồn tham khảo."
+  ],
+  "evidence": [
+   "Bài 600–900 từ, ảnh bản nháp/lịch sử chỉnh sửa và nguồn tham khảo nếu có.",
+   "Có thể nộp video 1 phút tóm tắt nội dung thay cho phần trình bày miệng nếu BQL yêu cầu."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Đủ độ dài, có 2 ví dụ, hướng dẫn áp dụng và rà soát ngôn ngữ."
+  ]
+ },
+ {
+  "code": "Q19",
+  "kind": "Q",
+  "level": 2,
+  "group": "E",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Người đi làm",
+   "Mọi đối tượng"
+  ],
+  "title": "Phân tích 1 tình huống học tập thường gặp",
+  "duration": "40–60 phút",
+  "purpose": "**Phạm vi nhỏ:** Phân tích 1 tình huống học tập thường gặp. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn một tình huống cụ thể như mất tập trung hoặc học không nhớ bài.",
+   "Nêu 2 nguyên nhân khả dĩ và 3 bước giải quyết.",
+   "Giải thích vì sao chọn các bước đó."
+  ],
+  "evidence": [
+   "Bài phân tích 1–2 trang hoặc 4–6 slide.",
+   "Ảnh bản nháp hoặc video giải thích 30–60 giây."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có nguyên nhân, 3 bước xử lý và giải thích hợp lý."
+  ]
+ },
+ {
+  "code": "V19",
+  "kind": "V",
+  "level": 3,
+  "group": "E",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Người đi làm",
+   "Mọi đối tượng"
+  ],
+  "title": "Phân tích và so sánh 2 tình huống học tập",
+  "duration": "90–120 phút",
+  "purpose": "**Bản mở rộng:** Phân tích và so sánh 2 tình huống học tập. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Phân tích 2 tình huống có liên quan nhưng khác nhau.",
+   "Với mỗi tình huống, nêu dấu hiệu, ít nhất 2 nguyên nhân và kế hoạch xử lý theo bước.",
+   "So sánh cách xử lý, chỉ ra rủi ro và cách biết giải pháp có hiệu quả."
+  ],
+  "evidence": [
+   "Bài phân tích so sánh 2 tình huống, có kế hoạch xử lý và tiêu chí theo dõi.",
+   "Ảnh tiến trình hoặc video trình bày 1–2 phút.",
+   "Nguồn tham khảo nếu có."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Phân tích đủ 2 tình huống, so sánh được cách xử lý và có tiêu chí đánh giá kết quả."
+  ]
+ },
+ {
+  "code": "Q20",
+  "kind": "Q",
+  "level": 2,
+  "group": "E",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Phân tích 1 tình huống học tập thường gặp",
+  "duration": "40–60 phút",
+  "purpose": "**Phạm vi nhỏ:** Phân tích 1 tình huống học tập thường gặp. Chỉ thực hiện sau khi BQL duyệt hỗ trợ quỹ tháng.",
+  "requirements": [
+   "Chọn một tình huống cụ thể như mất tập trung hoặc học không nhớ bài.",
+   "Nêu 2 nguyên nhân khả dĩ và 3 bước giải quyết.",
+   "Giải thích vì sao chọn các bước đó."
+  ],
+  "evidence": [
+   "Bài phân tích 1–2 trang hoặc 4–6 slide.",
+   "Ảnh bản nháp hoặc video giải thích 30–60 giây."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Có nguyên nhân, 3 bước xử lý và giải thích hợp lý."
+  ]
+ },
+ {
+  "code": "V20",
+  "kind": "V",
+  "level": 3,
+  "group": "E",
+  "audience": [
+   "Học sinh",
+   "Sinh viên",
+   "Mọi đối tượng"
+  ],
+  "title": "Phân tích và so sánh 2 tình huống học tập",
+  "duration": "90–120 phút",
+  "purpose": "**Bản mở rộng:** Phân tích và so sánh 2 tình huống học tập. Khối lượng và yêu cầu kiểm tra cao hơn Q; chỉ thực hiện khi BQL xác nhận trường hợp và thống nhất nhiệm vụ.",
+  "requirements": [
+   "Phân tích 2 tình huống có liên quan nhưng khác nhau.",
+   "Với mỗi tình huống, nêu dấu hiệu, ít nhất 2 nguyên nhân và kế hoạch xử lý theo bước.",
+   "So sánh cách xử lý, chỉ ra rủi ro và cách biết giải pháp có hiệu quả."
+  ],
+  "evidence": [
+   "Bài phân tích so sánh 2 tình huống, có kế hoạch xử lý và tiêu chí theo dõi.",
+   "Ảnh tiến trình hoặc video trình bày 1–2 phút.",
+   "Nguồn tham khảo nếu có."
+  ],
+  "source": [
+   "Ghi tên nguồn và đường dẫn cụ thể.",
+   "Tự làm; nếu tham khảo, ghi rõ phần đã dùng. Không sao chép nguyên sản phẩm."
+  ],
+  "criteria": [
+   "Phân tích đủ 2 tình huống, so sánh được cách xử lý và có tiêu chí đánh giá kết quả."
+  ]
+ },
+ {
+ "code": "Q21",
+ "kind": "Q",
+ "level": 1,
+ "group": "D",
+ "audience": [
+  "Mọi đối tượng"
+ ],
+ "title": "Hát một bài gửi tặng và động viên thành viên CLB",
+ "duration": "20–40 phút",
+ "purpose": "**Phạm vi nhỏ:** Gửi tặng cộng đồng CLB một bài hát phù hợp để mang lại niềm vui hoặc động viên mọi người. Chỉ thực hiện sau khi BQL duyệt nhiệm vụ.",
+ "requirements": [
+  "Chọn một bài hát có nội dung tích cực, phù hợp với môi trường CLB.",
+  "Tự thu một bản ghi âm hoặc video ngắn; không bắt buộc lộ mặt và không đánh giá theo độ hay của giọng hát.",
+  "Viết 2–3 câu gửi lời chúc hoặc giải thích vì sao chọn bài hát."
+ ],
+ "evidence": [
+  "Tệp ghi âm/video hoặc đường dẫn có quyền xem.",
+  "Lời nhắn ngắn gửi các thành viên; ghi tên bài hát và nghệ sĩ thể hiện nếu dùng bài có sẵn."
+ ],
+ "source": [
+  "Ghi tên bài hát và tác giả/nghệ sĩ nếu biết.",
+  "Không sử dụng nội dung xúc phạm, kỳ thị hoặc gây khó chịu; không nhận tác phẩm của người khác là của mình."
+ ],
+ "criteria": [
+  "Có bản ghi do thành viên tự thực hiện và nghe/xem được.",
+  "Bài hát và lời nhắn phù hợp, tích cực; hoàn thành đủ các yêu cầu đã thống nhất."
+ ]
+},
+ {
+ "code": "V21",
+ "kind": "V",
+ "level": 3,
+ "group": "D",
+ "audience": [
+  "Mọi đối tượng"
+ ],
+ "title": "Chuẩn bị phần trình diễn âm nhạc kèm lời nhắn dành cho CLB",
+ "duration": "90–150 phút",
+ "purpose": "**Bản mở rộng:** Tạo một sản phẩm âm nhạc có chuẩn bị và thông điệp rõ ràng cho cộng đồng CLB. Khối lượng và yêu cầu cao hơn Q21; chỉ thực hiện khi BQT xác nhận trường hợp và thống nhất nhiệm vụ.",
+ "requirements": [
+  "Chọn một bài hát phù hợp hoặc tự sáng tác một đoạn lời ngắn; chuẩn bị phần trình bày có mở đầu và kết thúc rõ ràng.",
+  "Thu âm hoặc quay video hoàn chỉnh; có thể không lộ mặt, nhưng cần bảo đảm nghe rõ phần trình bày.",
+  "Viết phần giới thiệu 150–250 từ nêu thông điệp, lý do chọn bài và lời gửi tới thành viên.",
+  "Tự rà soát chất lượng bản ghi và nộp bản cuối cùng; ghi nguồn bài hát nếu sử dụng tác phẩm có sẵn."
+ ],
+ "evidence": [
+  "Bản ghi âm/video hoàn chỉnh.",
+  "Phần giới thiệu 150–250 từ và thông tin nguồn bài hát.",
+  "Một bản nháp hoặc ảnh/video quá trình chuẩn bị."
+ ],
+ "source": [
+  "Ghi tên bài, tác giả/nghệ sĩ hoặc nguồn nhạc nền nếu có.",
+  "Nêu rõ phần nào do mình tự sáng tác; không dùng nhạc/nội dung không phù hợp."
+ ],
+ "criteria": [
+  "Sản phẩm hoàn chỉnh, nghe rõ và có thông điệp dành cho CLB.",
+  "Có phần giới thiệu, nguồn phù hợp và minh chứng quá trình chuẩn bị.",
+  "Thể hiện sự đầu tư cao hơn nhiệm vụ Q21, không chấm theo năng khiếu hay chất giọng."
+ ]
+},
+ {
+ "code": "Q22",
+ "kind": "Q",
+ "level": 1,
+ "group": "D",
+ "audience": [
+  "Mọi đối tượng"
+ ],
+ "title": "Vẽ một bức tranh tặng các thành viên CLB",
+ "duration": "30–45 phút",
+ "purpose": "**Phạm vi nhỏ:** Tạo một bức tranh đơn giản để gửi tặng hoặc cổ vũ các thành viên CLB. Có thể vẽ tay hoặc vẽ bằng công cụ số. Chỉ thực hiện sau khi BQL duyệt nhiệm vụ.",
+ "requirements": [
+  "Chọn chủ đề tích cực như tình bạn, học tập, dậy sớm, kiên trì hoặc lời chúc cho CLB.",
+  "Tạo một bức tranh có thông điệp hoặc lời nhắn ngắn; không yêu cầu kỹ năng hội họa chuyên nghiệp.",
+  "Nêu 2–3 câu giải thích ý nghĩa của bức tranh."
+ ],
+ "evidence": [
+  "Ảnh rõ nét hoặc tệp sản phẩm hoàn chỉnh.",
+  "Phần giải thích ngắn về thông điệp; có thể gửi ảnh bản phác thảo nếu có."
+ ],
+ "source": [
+  "Nếu sử dụng hình mẫu hoặc tài nguyên của người khác, ghi nguồn và nêu rõ phần tự thực hiện."
+ ],
+ "criteria": [
+  "Có sản phẩm nhìn rõ, phù hợp với CLB và có đóng góp cá nhân.",
+  "Thông điệp tích cực; nộp đủ phần giải thích ngắn."
+ ]
+},
+ {
+ "code": "V22",
+ "kind": "V",
+ "level": 3,
+ "group": "D",
+ "audience": [
+  "Mọi đối tượng"
+ ],
+ "title": "Thiết kế bộ tranh cổ vũ tinh thần học tập cho CLB",
+ "duration": "2–3 giờ",
+ "purpose": "**Bản mở rộng:** Tạo bộ tranh có chủ đề thống nhất để gửi tặng hoặc sử dụng trong hoạt động cộng đồng CLB. Khối lượng và yêu cầu cao hơn Q22; chỉ thực hiện khi BQT xác nhận và thống nhất nhiệm vụ.",
+ "requirements": [
+  "Tạo bộ gồm 3 tranh có liên kết với nhau, cùng xoay quanh học tập, dậy sớm, kỷ luật hoặc tinh thần đồng hành.",
+  "Mỗi tranh có thông điệp riêng; ít nhất một tranh có lời nhắn trực tiếp tới các thành viên.",
+  "Viết phần thuyết minh 200–300 từ giải thích ý tưởng chung, ý nghĩa từng tranh và cách bộ tranh khích lệ cộng đồng.",
+  "Lưu bản phác thảo hoặc ghi lại các bước chính để chứng minh quá trình tự thực hiện."
+ ],
+ "evidence": [
+  "Bộ 3 tranh hoàn chỉnh dưới dạng ảnh hoặc tệp thiết kế.",
+  "Bản thuyết minh 200–300 từ.",
+  "Bản phác thảo/ảnh tiến trình và ghi nguồn tài nguyên sử dụng nếu có."
+ ],
+ "source": [
+  "Ghi rõ hình ảnh, phông chữ hoặc tài nguyên bên ngoài đã sử dụng khi cần.",
+  "Nêu phần tự vẽ/tự thiết kế; không sao chép nguyên bộ tranh của người khác."
+ ],
+ "criteria": [
+  "Đủ 3 tranh có chủ đề thống nhất, nội dung tích cực và dễ hiểu.",
+  "Có thuyết minh và minh chứng quá trình tự làm.",
+  "Khối lượng, tính liên kết và phần giải thích cao hơn nhiệm vụ Q22; không đánh giá theo năng khiếu chuyên nghiệp."
+ ]
+},
+ {
+ "code": "Q23",
+ "kind": "Q",
+ "level": 1,
+ "group": "D",
+ "audience": [
+  "Mọi đối tượng"
+ ],
+ "title": "Viết thơ, thiệp hoặc lời động viên gửi thành viên CLB",
+ "duration": "20–40 phút",
+ "purpose": "**Phạm vi nhỏ:** Gửi tới các thành viên một lời chúc, bài thơ ngắn hoặc tấm thiệp động viên để tăng sự gắn kết. Chỉ thực hiện sau khi BQT duyệt nhiệm vụ.",
+ "requirements": [
+  "Chọn một hình thức: thơ ngắn, thiệp, thư hoặc lời nhắn động viên.",
+  "Nội dung chân thành, tích cực, phù hợp với tinh thần học tập và đồng hành của CLB.",
+  "Tự viết và rà soát chính tả trước khi nộp."
+ ],
+ "evidence": [
+  "Bản viết hoàn chỉnh hoặc ảnh/tệp thiệp.",
+  "Một câu giới thiệu người nhận hoặc thông điệp muốn gửi tới cộng đồng."
+ ],
+ "source": [
+  "Nếu trích dẫn câu nói hoặc dùng tác phẩm có sẵn, ghi tác giả/nguồn và phân biệt rõ phần trích dẫn với phần tự viết."
+ ],
+ "criteria": [
+  "Sản phẩm hoàn chỉnh, do thành viên tự viết hoặc có phần đóng góp cá nhân rõ ràng.",
+  "Nội dung tôn trọng, tích cực và phù hợp với CLB."
+ ]
+},
+ {
+ "code": "V23",
+ "kind": "V",
+ "level": 2,
+ "group": "D",
+ "audience": [
+  "Mọi đối tượng"
+ ],
+ "title": "Sáng tác một thông điệp động viên có nhiều hình thức cho CLB",
+ "duration": "75–120 phút",
+ "purpose": "**Bản mở rộng:** Phát triển một thông điệp động viên thành một sản phẩm có nội dung và hình thức hoàn chỉnh hơn. Yêu cầu cao hơn Q23; chỉ thực hiện khi BQT xác nhận và thống nhất nhiệm vụ.",
+ "requirements": [
+  "Tạo một sản phẩm chính: bài thơ/bức thư 300–500 từ hoặc bộ 3 thiệp có chủ đề thống nhất.",
+  "Thông điệp hướng tới một nhu cầu cụ thể của cộng đồng, như giữ động lực học tập, vượt qua trì hoãn hoặc hỗ trợ thành viên mới hòa nhập.",
+  "Viết phần giải thích 100–150 từ về đối tượng hướng tới, thông điệp chính và cách sản phẩm có thể khích lệ thành viên.",
+  "Tự rà soát nội dung, chính tả và hình thức trước khi nộp."
+ ],
+ "evidence": [
+  "Bài thơ/bức thư hoàn chỉnh hoặc bộ 3 thiệp.",
+  "Phần giải thích 100–150 từ.",
+  "Bản nháp hoặc ảnh quá trình thực hiện nếu có."
+ ],
+ "source": [
+  "Ghi nguồn nếu có trích dẫn hoặc dùng tài nguyên bên ngoài.",
+  "Không sao chép nguyên văn tác phẩm của người khác."
+ ],
+ "criteria": [
+  "Đáp ứng đúng một trong hai định dạng đã chọn và đủ số lượng.",
+  "Thông điệp rõ, phù hợp đối tượng và có giải thích ý tưởng.",
+  "Có đóng góp cá nhân và minh chứng hợp lý."
+ ]
+},
+ {
+ "code": "Q24",
+ "kind": "Q",
+ "level": 2,
+ "group": "D",
+ "audience": [
+  "Mọi đối tượng"
+ ],
+ "title": "Tạo một sản phẩm tài năng tự chọn dành tặng CLB",
+ "duration": "30–60 phút",
+ "purpose": "**Phạm vi nhỏ:** Thành viên tự chọn một tài năng hoặc sở thích để tạo sản phẩm tích cực dành tặng cộng đồng CLB, phù hợp với khả năng và điều kiện của mình. Chỉ thực hiện sau khi BQT duyệt nhiệm vụ.",
+ "requirements": [
+  "Chọn một hình thức chưa được liệt kê cụ thể hoặc phù hợp hơn với mình, ví dụ đọc diễn cảm, nhạc cụ, gấp giấy, thủ công, kể chuyện hoặc ảnh sáng tạo.",
+  "Thống nhất trước với BQT về sản phẩm, thời lượng và tiêu chí hoàn thành.",
+  "Tạo một sản phẩm nhỏ kèm lời giới thiệu 2–3 câu về ý nghĩa dành cho CLB."
+ ],
+ "evidence": [
+  "Ảnh, tệp, bản ghi âm/video hoặc đường dẫn xem được phù hợp với loại sản phẩm.",
+  "Lời giới thiệu ngắn và nguồn tài nguyên nếu có sử dụng."
+ ],
+ "source": [
+  "Sản phẩm phải do thành viên tự thực hiện hoặc nêu rõ phần đóng góp cá nhân.",
+  "Chọn nội dung an toàn, tôn trọng và phù hợp với cộng đồng CLB."
+ ],
+ "criteria": [
+  "Sản phẩm và tiêu chí đã được BQT thống nhất trước khi bắt đầu.",
+  "Có minh chứng xem/đọc/kiểm tra được và thông điệp tích cực."
+ ]
+},
+ {
+ "code": "V24",
+ "kind": "V",
+ "level": 3,
+ "group": "D",
+ "audience": [
+  "Mọi đối tượng"
+ ],
+ "title": "Xây dựng một sản phẩm tài năng hoàn chỉnh kèm phần giới thiệu quá trình",
+ "duration": "2–3 giờ",
+ "purpose": "**Bản mở rộng:** Phát triển tài năng tự chọn thành một sản phẩm hoàn chỉnh có chuẩn bị, thuyết minh và minh chứng quá trình. Yêu cầu cao hơn Q24; BQT phải duyệt ý tưởng, khối lượng và thời hạn trước khi thực hiện.",
+ "requirements": [
+  "Đề xuất một ý tưởng cụ thể và thống nhất trước với BQT về sản phẩm, khối lượng, thời hạn và cách đánh giá.",
+  "Tạo sản phẩm có nhiều bước hoặc có cấu trúc hoàn chỉnh; ví dụ tiết mục nhạc cụ có mở đầu/kết thúc, bộ thủ công 3 món liên kết, câu chuyện có kịch bản, hoặc bộ ảnh theo chủ đề.",
+  "Viết phần giới thiệu 250–400 từ về ý tưởng, các bước thực hiện, khó khăn và điều muốn gửi tới cộng đồng.",
+  "Nộp minh chứng quá trình như bản nháp, ảnh các giai đoạn hoặc video quay thao tác; chỉ dùng mức minh chứng phù hợp với hình thức sản phẩm."
+ ],
+ "evidence": [
+  "Sản phẩm cuối cùng hoặc đường dẫn xem được.",
+  "Bản giới thiệu/quá trình 250–400 từ.",
+  "Ít nhất 2 minh chứng tiến trình hoặc bản nháp, nếu phù hợp với loại sản phẩm."
+ ],
+ "source": [
+  "Ghi nguồn tài nguyên hoặc nhạc/hình ảnh sử dụng nếu có.",
+  "Không sử dụng sản phẩm của người khác làm sản phẩm của mình; bảo đảm nội dung phù hợp và an toàn."
+ ],
+ "criteria": [
+  "Ý tưởng và tiêu chí đã được BQT duyệt trước khi thực hiện.",
+  "Sản phẩm hoàn chỉnh, có phần giới thiệu và minh chứng quá trình.",
+  "Mức đầu tư, độ hoàn thiện và giải thích quá trình cao hơn Q24; không lấy độ nổi tiếng hay tài năng chuyên nghiệp làm tiêu chí."
+ ]
+}
+];
+const groupNames={A:'Bài học / giải bài',B:'Phương pháp học',C:'Kinh nghiệm / trải nghiệm',D:'Sáng tạo cho CLB',E:'Website / tài nguyên hữu ích'};
+const levelNames={1:'Cơ bản',2:'Có đầu tư',3:'Nâng cao'};
+const $=id=>document.getElementById(id);const grid=$('taskGrid');let currentTask=null;
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function emphasize(s){const x=esc(s);const i=x.search(/[:：;]/);if(i>2&&i<55)return '<strong>'+x.slice(0,i+1)+'</strong>'+x.slice(i+1);const m=x.match(/^(\S+(?:\s+\S+){0,2})/);return m?'<strong>'+m[0]+'</strong>'+x.slice(m[0].length):x}
+function render(){const q=$('search').value.trim().toLowerCase(),kind=$('kind').value,level=$('level').value,group=$('group').value,aud=$('audience').value;const filtered=tasks.filter(t=>(kind==='all'||t.kind===kind)&&(level==='all'||String(t.level)===level)&&(group==='all'||t.group===group)&&(aud==='all'||t.audience.includes(aud)||t.audience.includes('Mọi đối tượng'))&&(!q||[t.code,t.title,t.purpose,t.group,...t.audience].join(' ').toLowerCase().includes(q)));$('resultCount').textContent=filtered.length+' nhiệm vụ';$('filterSummary').textContent=filtered.length===tasks.length?'Đang hiển thị tất cả nhiệm vụ':'Đã lọc '+filtered.length+' / '+tasks.length+' nhiệm vụ';grid.innerHTML='';if(!filtered.length){grid.innerHTML='<div class="empty"><div style="font-size:28px">🔎</div><strong>Chưa tìm thấy nhiệm vụ phù hợp</strong><p>Thử đổi bộ lọc hoặc từ khóa tìm kiếm.</p></div>';return}filtered.forEach(t=>{const d=document.createElement('article');d.className='task';d.innerHTML=`<div class="task-top"><span class="task-code ${t.kind==='V'?'v':''}">${t.code}</span><span class="level">Mức ${t.level} · ${levelNames[t.level]}</span></div><h3>${esc(t.title)}</h3><p>${t.purpose.split(/(?<=\.) /).map(x=>x.startsWith("**")?"<strong>"+esc(x.replaceAll("**",""))+"</strong>":esc(x)).join(" ")}</p><div class="tags"><span class="tag">Nhóm ${t.group}</span><span class="tag">${esc(groupNames[t.group])}</span><span class="tag">${esc(t.audience.join(', '))}</span></div><div class="task-bottom"><span class="evidence-mini">📎 <strong>${emphasize(t.evidence[0])}</strong></span><button class="btn btn-ghost" data-code="${t.code}">Xem chi tiết ↗</button></div>`;d.querySelector('button').addEventListener('click',()=>openTask(t.code));grid.appendChild(d)})}
+function openTask(code){const t=tasks.find(x=>x.code===code);if(!t)return;currentTask=t;$('modalCode').textContent=t.code;$('modalCode').className='task-code '+(t.kind==='V'?'v':'');$('modalLevel').textContent=`Mức ${t.level} · ${levelNames[t.level]}`;$('modalTitle').textContent=t.title;$('modalPurpose').innerHTML=t.purpose.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>');$('modalTags').innerHTML=`<span class="tag">${t.kind==='Q'?'Xét hỗ trợ quỹ tháng':'Trường hợp vắng không phép'}</span><span class="tag">Nhóm ${t.group}: ${groupNames[t.group]}</span><span class="tag">${t.duration}</span><span class="tag">${t.audience.join(', ')}</span>`;const blocks=[['Yêu cầu thực hiện',t.requirements],['Bằng chứng cần nộp',t.evidence],['Nguồn tham khảo và ý tưởng',t.source],['Tiêu chí hoàn thành',t.criteria]];$('modalDetails').innerHTML=blocks.map(([title,items])=>`<section class="detail-block ${title==='Bằng chứng cần nộp'||title==='Nguồn tham khảo và ý tưởng'?'full':''}"><h3>${title}</h3><ul>${items.map(i=>'<li>'+emphasize(i)+'</li>').join('')}</ul></section>`).join('');$('modalBack').classList.add('open');$('closeModal').focus()}
+function closeModal(){$('modalBack').classList.remove('open')}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2200)}
+['search','kind','level','group','audience'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));$('reset').addEventListener('click',()=>{['search','kind','level','group','audience'].forEach(id=>$(id).value=id==='search'?'':'all');render()});$('closeModal').addEventListener('click',closeModal);$('closeModal2').addEventListener('click',closeModal);$('modalBack').addEventListener('click',e=>{if(e.target===$('modalBack'))closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});$('copyCode').addEventListener('click',async()=>{if(!currentTask)return;try{await navigator.clipboard.writeText(currentTask.code);toast('Đã sao chép mã '+currentTask.code)}catch(e){const ta=document.createElement('textarea');ta.value=currentTask.code;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Đã sao chép mã '+currentTask.code)}});const readRules=$('readRules'), unlockTasks=$('unlockTasks'), taskPortal=$('taskPortal');
+readRules.addEventListener('change',()=>{unlockTasks.disabled=!readRules.checked;$('gateHint').textContent=readRules.checked?'Bạn đã xác nhận đọc quy định. Nhấn nút để mở danh sách nhiệm vụ.':'Tích vào ô xác nhận để mở bộ lọc nhiệm vụ.';});
+unlockTasks.addEventListener('click',()=>{if(!readRules.checked)return;taskPortal.classList.remove('portal-locked');taskPortal.setAttribute('aria-hidden','false');unlockTasks.textContent='Đã mở danh sách nhiệm vụ ✓';$('gateHint').textContent='Danh sách nhiệm vụ đã mở. Bạn có thể thay đổi bộ lọc bất cứ lúc nào.';taskPortal.scrollIntoView({behavior:'smooth',block:'start'});});
+$('totalCount').textContent=tasks.length;render();
+</script></body></html>
